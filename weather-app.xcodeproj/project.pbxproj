@@ -17,6 +17,9 @@
 		DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7E524C61F76001A3DD5 /* HubViewController.swift */; };
 		DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F7E624C61F76001A3DD5 /* HubViewController.xib */; };
 		DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7E924C61F81001A3DD5 /* HubCoordinator.swift */; };
+		DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F024C645BC001A3DD5 /* Router.swift */; };
+		DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F224C65B17001A3DD5 /* Service.swift */; };
+		DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DB53F7E524C61F76001A3DD5 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
 		DB53F7E624C61F76001A3DD5 /* HubViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HubViewController.xib; sourceTree = "<group>"; };
 		DB53F7E924C61F81001A3DD5 /* HubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCoordinator.swift; sourceTree = "<group>"; };
+		DB53F7F024C645BC001A3DD5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DB53F7F224C65B17001A3DD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,10 @@
 				DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */,
 				DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */,
 				DB53F7DC24C61E47001A3DD5 /* Coordinator */,
-				DB53F7EB24C62170001A3DD5 /* Supporting Files */,
+				DB53F7F424C65D6F001A3DD5 /* Model */,
+				DB53F7EF24C645A6001A3DD5 /* Network */,
 				DB53F7E124C61F51001A3DD5 /* Sections */,
+				DB53F7EB24C62170001A3DD5 /* Supporting Files */,
 			);
 			path = "weather-app";
 			sourceTree = "<group>";
@@ -154,6 +162,23 @@
 				DB53F7C524C61DD9001A3DD5 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB53F7EF24C645A6001A3DD5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB53F7F024C645BC001A3DD5 /* Router.swift */,
+				DB53F7F224C65B17001A3DD5 /* Service.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DB53F7F424C65D6F001A3DD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */,
+				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
+				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
+				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
