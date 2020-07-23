@@ -23,6 +23,13 @@
 		DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F924C78797001A3DD5 /* HubViewModel.swift */; };
 		DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */; };
 		DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */; };
+		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
+		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
+		DBCEE26E24C93C1800FD6A0F /* windy.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26A24C93C1800FD6A0F /* windy.json */; };
+		DBCEE26F24C93C1800FD6A0F /* hurricane.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26B24C93C1800FD6A0F /* hurricane.json */; };
+		DBCEE27024C93C1800FD6A0F /* thunder-storm.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26C24C93C1800FD6A0F /* thunder-storm.json */; };
+		DBCEE27124C93C1800FD6A0F /* fog.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26D24C93C1800FD6A0F /* fog.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,20 @@
 			remoteInfo = "weather-app";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBCEE26624C93AD700FD6A0F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DB53F7B724C61DD8001A3DD5 /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +77,12 @@
 		DB53F7F924C78797001A3DD5 /* HubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModel.swift; sourceTree = "<group>"; };
 		DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
+		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
+		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
+		DBCEE26B24C93C1800FD6A0F /* hurricane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hurricane.json; sourceTree = "<group>"; };
+		DBCEE26C24C93C1800FD6A0F /* thunder-storm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunder-storm.json"; sourceTree = "<group>"; };
+		DBCEE26D24C93C1800FD6A0F /* fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fog.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +110,7 @@
 				DB53F7B924C61DD8001A3DD5 /* weather-app */,
 				DB53F7D024C61DD9001A3DD5 /* weather-appTests */,
 				DB53F7B824C61DD8001A3DD5 /* Products */,
+				DBCEE26224C93AD600FD6A0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +198,7 @@
 				DB53F7C324C61DD9001A3DD5 /* Assets.xcassets */,
 				DB53F7C824C61DD9001A3DD5 /* Info.plist */,
 				DB53F7C524C61DD9001A3DD5 /* LaunchScreen.storyboard */,
+				DBCEE26724C93AF900FD6A0F /* Lottie Files */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -198,6 +228,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DBCEE26224C93AD600FD6A0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBCEE26324C93AD700FD6A0F /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBCEE26724C93AF900FD6A0F /* Lottie Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBCEE26D24C93C1800FD6A0F /* fog.json */,
+				DBCEE26B24C93C1800FD6A0F /* hurricane.json */,
+				DBCEE26C24C93C1800FD6A0F /* thunder-storm.json */,
+				DBCEE26824C93B9400FD6A0F /* tornado.json */,
+				DBCEE26A24C93C1800FD6A0F /* windy.json */,
+			);
+			path = "Lottie Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +258,7 @@
 				DB53F7B324C61DD8001A3DD5 /* Sources */,
 				DB53F7B424C61DD8001A3DD5 /* Frameworks */,
 				DB53F7B524C61DD8001A3DD5 /* Resources */,
+				DBCEE26624C93AD700FD6A0F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,8 +332,13 @@
 			files = (
 				DB53F7C724C61DD9001A3DD5 /* LaunchScreen.storyboard in Resources */,
 				DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */,
+				DBCEE27124C93C1800FD6A0F /* fog.json in Resources */,
 				DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */,
+				DBCEE26F24C93C1800FD6A0F /* hurricane.json in Resources */,
 				DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */,
+				DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */,
+				DBCEE27024C93C1800FD6A0F /* thunder-storm.json in Resources */,
+				DBCEE26E24C93C1800FD6A0F /* windy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +520,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RN2N3F8SZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "weather-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +542,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RN2N3F8SZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "weather-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

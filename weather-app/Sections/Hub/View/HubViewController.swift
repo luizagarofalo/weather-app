@@ -29,8 +29,8 @@ class HubViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
-        viewModel.startLocationManager()
+        self.viewModel.startLocationManager()
+        self.setupCollectionView()
     }
     
     // MARK: - Private Methods
@@ -53,6 +53,6 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.size.width, height: 375)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 480)
     }
 }
