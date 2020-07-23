@@ -20,6 +20,7 @@
 		DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F024C645BC001A3DD5 /* Router.swift */; };
 		DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F224C65B17001A3DD5 /* Service.swift */; };
 		DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */; };
+		DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F924C78797001A3DD5 /* HubViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		DB53F7F024C645BC001A3DD5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DB53F7F224C65B17001A3DD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		DB53F7F924C78797001A3DD5 /* HubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				DB53F7E324C61F5C001A3DD5 /* Coordinator */,
 				DB53F7E424C61F62001A3DD5 /* View */,
+				DB53F7F824C78775001A3DD5 /* ViewModel */,
 			);
 			path = Hub;
 			sourceTree = "<group>";
@@ -179,6 +182,14 @@
 				DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DB53F7F824C78775001A3DD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB53F7F924C78797001A3DD5 /* HubViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
+				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

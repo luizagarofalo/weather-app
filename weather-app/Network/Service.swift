@@ -9,7 +9,7 @@
 import Foundation
 
 class Service {
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
+    func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
         
         var components = URLComponents()
         components.scheme = router.scheme
@@ -36,9 +36,13 @@ class Service {
                 return
             }
             
-            let object = try! JSONDecoder().decode(T.self, from: data)
-            DispatchQueue.main.async {
-                completion(.success(object))
+            do {
+                let object = try JSONDecoder().decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(object))
+                }
+            } catch {
+                debugPrint("– JSONDecoder – \(T.self): \(error)")
             }
         }
         

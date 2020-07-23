@@ -12,6 +12,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     private var hubCoordinator: HubCoordinator?
+    private var hubViewModel: HubViewModel?
     private var hubViewController: HubViewController?
     private var window: UIWindow
     
@@ -20,7 +21,9 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        hubViewController = HubViewController()
+        hubViewModel = HubViewModel()
+        guard let hubViewModel = hubViewModel else { return }
+        hubViewController = HubViewController(viewModel: hubViewModel)
         guard let hubViewController = hubViewController else { return }
         hubCoordinator = HubCoordinator(viewController: hubViewController, window: window)
         hubCoordinator?.start()
