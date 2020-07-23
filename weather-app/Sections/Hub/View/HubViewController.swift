@@ -24,6 +24,7 @@ class HubViewController: UIViewController {
     init(viewModel: HubViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
+        self.viewModel.viewDelegate = self
     }
 
     // MARK: - Overrides
@@ -43,13 +44,34 @@ class HubViewController: UIViewController {
     }
 }
 
+extension HubViewController: HubViewModelViewDelegate {
+    func didStartLoading() {
+        // TODO: Add skeleton view.
+    }
+    
+    func didFinishLoading() {
+        self.collectionView.reloadData()
+    }
+    
+    func didFinishLoadingWithError() {
+        // TODO: Add error view.
+    }
+}
+
 extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "CurrentWeatherCollectionViewCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrentWeatherCollectionViewCell",
+                                                            for: indexPath) as? CurrentWeatherCollectionViewCell else { return UICollectionViewCell() }
+        
+        if let weather = self.viewModel.weather {
+            cell.setup(weather)
+        }
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

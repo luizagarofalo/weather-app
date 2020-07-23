@@ -9,6 +9,12 @@
 import CoreLocation
 import Foundation
 
+protocol HubViewModelViewDelegate: AnyObject {
+    func didStartLoading()
+    func didFinishLoading()
+    func didFinishLoadingWithError()
+}
+
 class HubViewModel: NSObject {
     
     enum Location {
@@ -20,10 +26,12 @@ class HubViewModel: NSObject {
     private var cityName: String?
     private var latitude: String?
     private var longitude: String?
-    
     private var locationCoordinate: CLLocationCoordinate2D?
     private var locationManager = CLLocationManager()
     private var service = Service()
+    
+    var weather: WeatherModel?
+    weak var viewDelegate: HubViewModelViewDelegate?
     
     // MARK: - Private Methods
     private func checkAuthorizationStatus(status: CLAuthorizationStatus? = nil) {
@@ -46,10 +54,12 @@ class HubViewModel: NSObject {
             router = Router.current(latitude, longitude, nil)
         }
         
+        self.viewDelegate?.didStartLoading()
         service.request(router: router) { (result: Result<WeatherModel, Error>) in
             switch result {
             case .success(let weather):
-                print(weather)
+                self.weather = weather
+                self.viewDelegate?.didFinishLoading()
             case .failure(let error):
                 print(error)
             }
