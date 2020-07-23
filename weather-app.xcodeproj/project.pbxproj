@@ -21,6 +21,8 @@
 		DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F224C65B17001A3DD5 /* Service.swift */; };
 		DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */; };
 		DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F924C78797001A3DD5 /* HubViewModel.swift */; };
+		DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */; };
+		DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		DB53F7F224C65B17001A3DD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		DB53F7F924C78797001A3DD5 /* HubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModel.swift; sourceTree = "<group>"; };
+		DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			children = (
 				DB53F7E524C61F76001A3DD5 /* HubViewController.swift */,
 				DB53F7E624C61F76001A3DD5 /* HubViewController.xib */,
+				DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */,
+				DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				DB53F7C724C61DD9001A3DD5 /* LaunchScreen.storyboard in Resources */,
 				DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */,
 				DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */,
+				DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +308,7 @@
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
+				DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */,
 				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
 			);

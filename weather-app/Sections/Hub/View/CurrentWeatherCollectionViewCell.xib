@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CurrentWeatherCollectionViewCell" id="gTV-IL-0wX" customClass="CurrentWeatherCollectionViewCell" customModule="weather_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-BO-79j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-AK-BSf" userLabel="City Name Label">
+                                <rect key="frame" x="100.5" y="40" width="174" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.094117647058823528" green="0.12549019607843137" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scattered Snow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMK-Sf-RqB" userLabel="Weather Condition Label">
+                                <rect key="frame" x="132.5" y="75.5" width="110" height="19"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <color key="textColor" red="0.68568458751794248" green="0.68014484453555935" blue="0.8382177982233503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssf-Zq-WTI" userLabel="Animation View">
+                                <rect key="frame" x="87.5" y="110.5" width="200" height="140"/>
+                                <color key="backgroundColor" red="0.82352941176470584" green="0.81568627450980391" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qFd-0D-XE8"/>
+                                    <constraint firstAttribute="height" constant="140" id="zm0-fM-ezN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpL-jm-eeJ" userLabel="Temperature Label">
+                                <rect key="frame" x="159.5" y="266.5" width="56" height="64"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="56"/>
+                                <color key="textColor" red="0.094117647058823528" green="0.12549019607843137" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-4m-kSb" userLabel="Date View">
+                                <rect key="frame" x="151.5" y="346.5" width="72" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/07" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-KU-dFs">
+                                        <rect key="frame" x="2" y="3" width="68" height="16"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                        <color key="textColor" red="0.68568458750000005" green="0.68014484450000001" blue="0.83821779819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82352941176470584" green="0.81568627450980391" blue="0.99607843137254903" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="QNg-Zo-ZOD"/>
+                                    <constraint firstItem="FqO-KU-dFs" firstAttribute="centerX" secondItem="T0W-4m-kSb" secondAttribute="centerX" id="TGV-jk-yLf"/>
+                                    <constraint firstItem="FqO-KU-dFs" firstAttribute="leading" secondItem="T0W-4m-kSb" secondAttribute="leading" constant="2" id="i3G-hP-a53"/>
+                                    <constraint firstItem="FqO-KU-dFs" firstAttribute="top" secondItem="T0W-4m-kSb" secondAttribute="top" constant="3" id="oKk-c8-EpB"/>
+                                    <constraint firstAttribute="trailing" secondItem="FqO-KU-dFs" secondAttribute="trailing" constant="2" id="sSp-P3-fbZ"/>
+                                    <constraint firstAttribute="width" constant="72" id="w3p-ML-f3u"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12t-lq-Oby" userLabel="Unit Label">
+                                <rect key="frame" x="215.5" y="266.5" width="28" height="64"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="56"/>
+                                <color key="textColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T0W-4m-kSb" firstAttribute="top" secondItem="wpL-jm-eeJ" secondAttribute="bottom" constant="16" id="66r-gy-5sS"/>
+                            <constraint firstItem="wpL-jm-eeJ" firstAttribute="centerX" secondItem="vRR-BO-79j" secondAttribute="centerX" id="K8x-du-jb9"/>
+                            <constraint firstItem="T0W-4m-kSb" firstAttribute="centerX" secondItem="vRR-BO-79j" secondAttribute="centerX" id="NJ6-SE-aRP"/>
+                            <constraint firstItem="12t-lq-Oby" firstAttribute="centerY" secondItem="wpL-jm-eeJ" secondAttribute="centerY" id="Nys-7V-L76"/>
+                            <constraint firstItem="RMK-Sf-RqB" firstAttribute="top" secondItem="tFV-AK-BSf" secondAttribute="bottom" constant="8" id="Tdo-mw-3mh"/>
+                            <constraint firstItem="RMK-Sf-RqB" firstAttribute="centerX" secondItem="vRR-BO-79j" secondAttribute="centerX" id="b9U-rZ-7bD"/>
+                            <constraint firstItem="ssf-Zq-WTI" firstAttribute="top" secondItem="RMK-Sf-RqB" secondAttribute="bottom" constant="16" id="bss-Gs-JEg"/>
+                            <constraint firstItem="ssf-Zq-WTI" firstAttribute="centerX" secondItem="vRR-BO-79j" secondAttribute="centerX" id="pH8-QR-4km"/>
+                            <constraint firstItem="12t-lq-Oby" firstAttribute="leading" secondItem="wpL-jm-eeJ" secondAttribute="trailing" id="s3W-5U-5f4"/>
+                            <constraint firstItem="tFV-AK-BSf" firstAttribute="centerX" secondItem="vRR-BO-79j" secondAttribute="centerX" id="sgF-SU-dUE"/>
+                            <constraint firstItem="wpL-jm-eeJ" firstAttribute="top" secondItem="ssf-Zq-WTI" secondAttribute="bottom" constant="16" id="uEI-aa-C2Q"/>
+                            <constraint firstItem="tFV-AK-BSf" firstAttribute="top" secondItem="vRR-BO-79j" secondAttribute="top" constant="40" id="vBh-dX-ecJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="vRR-BO-79j" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bkt-Sp-0U6"/>
+                <constraint firstAttribute="bottom" secondItem="vRR-BO-79j" secondAttribute="bottom" id="Cio-fe-uh6"/>
+                <constraint firstAttribute="trailing" secondItem="vRR-BO-79j" secondAttribute="trailing" id="Fjm-i9-Cn6"/>
+                <constraint firstItem="vRR-BO-79j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rbf-hP-0ZY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="375" height="393"/>
+            <point key="canvasLocation" x="138.40579710144928" y="110.15625"/>
+        </collectionViewCell>
+    </objects>
+</document>
