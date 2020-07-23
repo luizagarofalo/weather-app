@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB52778524CA0657002DCF4D /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */; };
+		DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778624CA068C002DCF4D /* UIView+Extension.swift */; };
 		DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */; };
 		DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */; };
 		DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB53F7C324C61DD9001A3DD5 /* Assets.xcassets */; };
@@ -36,6 +38,10 @@
 		DBCEE27B24C954F700FD6A0F /* clear-night.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE27A24C954F700FD6A0F /* clear-night.json */; };
 		DBCEE27D24C9552500FD6A0F /* clear-day.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE27C24C9552500FD6A0F /* clear-day.json */; };
 		DBCEE27F24C95B6D00FD6A0F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE27E24C95B6D00FD6A0F /* loading.json */; };
+		DBCEE28124C9E75300FD6A0F /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE28024C9E75300FD6A0F /* SkeletonView.framework */; };
+		DBCEE28224C9E75300FD6A0F /* SkeletonView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE28024C9E75300FD6A0F /* SkeletonView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCEE28324C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift */; };
+		DBCEE28624C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE28424C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DBCEE28224C9E75300FD6A0F /* SkeletonView.framework in Embed Frameworks */,
 				DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -63,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		DB52778624CA068C002DCF4D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DB53F7B724C61DD8001A3DD5 /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +104,9 @@
 		DBCEE27A24C954F700FD6A0F /* clear-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-night.json"; sourceTree = "<group>"; };
 		DBCEE27C24C9552500FD6A0F /* clear-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-day.json"; sourceTree = "<group>"; };
 		DBCEE27E24C95B6D00FD6A0F /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		DBCEE28024C9E75300FD6A0F /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
+		DBCEE28324C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherSkeletonCollectionViewCell.swift; sourceTree = "<group>"; };
+		DBCEE28424C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherSkeletonCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCEE28124C9E75300FD6A0F /* SkeletonView.framework in Frameworks */,
 				DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB52778324CA057D002DCF4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */,
+				DB52778624CA068C002DCF4D /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DB53F7AE24C61DD8001A3DD5 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,7 @@
 				DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */,
 				DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */,
 				DB53F7DC24C61E47001A3DD5 /* Coordinator */,
+				DB52778324CA057D002DCF4D /* Extensions */,
 				DB53F7F424C65D6F001A3DD5 /* Model */,
 				DB53F7EF24C645A6001A3DD5 /* Network */,
 				DB53F7E124C61F51001A3DD5 /* Sections */,
@@ -200,6 +223,8 @@
 				DB53F7E624C61F76001A3DD5 /* HubViewController.xib */,
 				DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */,
 				DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */,
+				DBCEE28324C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift */,
+				DBCEE28424C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +269,7 @@
 		DBCEE26224C93AD600FD6A0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBCEE28024C9E75300FD6A0F /* SkeletonView.framework */,
 				DBCEE26324C93AD700FD6A0F /* Lottie.framework */,
 			);
 			name = Frameworks;
@@ -349,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB53F7C724C61DD9001A3DD5 /* LaunchScreen.storyboard in Resources */,
+				DBCEE28624C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.xib in Resources */,
 				DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */,
 				DBCEE27524C954A300FD6A0F /* cloudy.json in Resources */,
 				DBCEE27124C93C1800FD6A0F /* fog.json in Resources */,
@@ -379,16 +406,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB52778524CA0657002DCF4D /* UICollectionView+Extension.swift in Sources */,
 				DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */,
 				DBCEE27324C9494E00FD6A0F /* Condition.swift in Sources */,
 				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
 				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
+				DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */,
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
 				DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */,
+				DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */,
 				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
 			);

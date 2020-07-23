@@ -6,6 +6,7 @@
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
+import SkeletonView
 import UIKit
 
 class HubViewController: UIViewController {
@@ -14,19 +15,20 @@ class HubViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
+    var isLoading = true
     var viewModel: HubViewModel!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     init(viewModel: HubViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
         self.viewModel.viewDelegate = self
     }
-
+    
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +41,18 @@ class HubViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.alwaysBounceVertical = true
-        self.collectionView.register(UINib(nibName: "CurrentWeatherCollectionViewCell", bundle: nil),
-                                     forCellWithReuseIdentifier: "CurrentWeatherCollectionViewCell")
+        self.collectionView.register(CurrentWeatherCollectionViewCell.self)
+        self.collectionView.register(CurrentWeatherSkeletonCollectionViewCell.self)
     }
 }
 
 extension HubViewController: HubViewModelViewDelegate {
     func didStartLoading() {
-        // TODO: Add skeleton view.
+        self.isLoading = true
     }
     
     func didFinishLoading() {
+        self.isLoading = false
         self.collectionView.reloadData()
     }
     
@@ -64,14 +67,14 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CurrentWeatherCollectionViewCell",
-                                                            for: indexPath) as? CurrentWeatherCollectionViewCell else { return UICollectionViewCell() }
-        
-        if let weather = self.viewModel.weather {
-            cell.setup(weather)
+        if isLoading {
+            return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
+        } else {
+            return collectionView.dequeueReusableCell(of: CurrentWeatherCollectionViewCell.self, for: indexPath) { cell in
+                guard let weather = self.viewModel.weather else { return }
+                cell.setup(weather)
+            }
         }
-        
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

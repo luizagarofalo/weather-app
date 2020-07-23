@@ -1,0 +1,21 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "SkeletonView",
+      "hash" : "f31a3b3afbf9cd18617145a5a1e7715e0cfc58dcf14015dd091b5eb440a2cf86"
+    }
+  ],
+  "commitish" : "1.8.7",
+  "iOS" : [
+    {
+      "name" : "SkeletonView",
+      "hash" : "75f50d48af4265f03f744e7452fddf7b53894dbac3890201f41a13b07d355b0a"
+    }
+  ]
+}

@@ -34,10 +34,18 @@ class CurrentWeatherCollectionViewCell: UICollectionViewCell {
         animationView.addSubview(weatherConditionAnimation)
     }
     
+    private func getDate() -> String? {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM"
+        return formatter.string(from: date)
+    }
+    
     private func setupLabels(_ weather: WeatherModel) {
         self.cityNameLabel.text = weather.name
         self.weatherConditionLabel.text = weather.weather[0].weatherDescription.capitalized
         self.temperatureLabel.text = String(format: "%.0f", weather.main.temp)
+        self.dateLabel.text = getDate()
     }
     
     // MARK: - Public Methods
