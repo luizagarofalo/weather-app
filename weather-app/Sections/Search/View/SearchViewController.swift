@@ -10,6 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    
     // MARK: - Properties
     var viewModel: SearchViewModel!
     
@@ -27,5 +31,14 @@ class SearchViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Actions
+    @IBAction func search(_ sender: UIButton) {
+        self.viewModel.searchCity()
+    }
+    
+    @IBAction func useCurrentLocation(_ sender: UIButton) {
+        self.viewModel.startLocationManager()
     }
 }

@@ -28,10 +28,24 @@ class TabBarCoordinator: Coordinator {
     func start() {
         tabBar?.viewControllers = [hubCoordinator.start(), searchCoordinator.start()]
         window.rootViewController = tabBar
+        searchCoordinator.delegate = self
     }
     
     func stop() {
         hubCoordinator = nil
         tabBar = nil
+    }
+}
+
+extension TabBarCoordinator: SearchCoordinatorDelegate {
+    func didSelectCityName(_ cityName: String) {
+        tabBar?.selectedIndex = 0
+        hubCoordinator.viewModel?.cityName = cityName
+    }
+    
+    func didSelectCurrentLocation(latitude: String, longitude: String) {
+        tabBar?.selectedIndex = 0
+        hubCoordinator.viewModel?.latitude = latitude
+        hubCoordinator.viewModel?.longitude = longitude
     }
 }

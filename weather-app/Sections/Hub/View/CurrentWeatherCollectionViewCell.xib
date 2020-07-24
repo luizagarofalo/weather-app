@@ -50,7 +50,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/07" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-KU-dFs">
                                         <rect key="frame" x="2" y="4" width="52" height="16.5"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
-                                        <color key="textColor" red="0.68568458750000005" green="0.68014484450000001" blue="0.83821779819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.68627450980392157" green="0.67843137254901964" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

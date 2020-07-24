@@ -17,35 +17,20 @@ protocol HubViewModelViewDelegate: AnyObject {
 
 class HubViewModel: NSObject {
     
-    enum Location {
-        case cityName
-        case coordinates
-    }
-    
     // MARK: - Properties
-    private var cityName: String?
-    private var latitude: String?
-    private var longitude: String?
     private var locationCoordinate: CLLocationCoordinate2D?
     private var locationManager = CLLocationManager()
     private var service = Service()
     
+    var cityName: String?
+    var latitude: String?
+    var longitude: String?
     var weather: WeatherModel?
+    
     weak var viewDelegate: HubViewModelViewDelegate?
     
-    // MARK: - Private Methods
-    private func checkAuthorizationStatus(status: CLAuthorizationStatus? = nil) {
-        switch status ?? CLLocationManager.authorizationStatus() {
-        case .denied, .notDetermined, .restricted:
-            locationManager.stopUpdatingLocation()
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
-        @unknown default:
-            break
-        }
-    }
-    
-    private func fetchCurrentWeather(_ location: Location) {
+    // MARK: - Public Methods
+    func fetchCurrentWeather(_ location: Location) {
         let router: Router
         switch location {
         case .cityName:
@@ -64,29 +49,5 @@ class HubViewModel: NSObject {
                 print(error)
             }
         }
-    }
-    
-    // MARK: - Public Methods
-    func startLocationManager() {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-    }
-}
-
-extension HubViewModel: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkAuthorizationStatus(status: status)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastLocation = locations.last else { return }
-        locationCoordinate = lastLocation.coordinate
-        locationManager.stopUpdatingLocation()
-        
-        guard let locationCoordinate = locationCoordinate else { return }
-        latitude = String(format: "%f", locationCoordinate.latitude)
-        longitude = String(format: "%f", locationCoordinate.longitude)
-        
-        fetchCurrentWeather(.coordinates)
     }
 }

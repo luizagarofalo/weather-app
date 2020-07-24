@@ -33,7 +33,7 @@ class HubViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.startLocationManager()
+        self.viewModel.fetchCurrentWeather(.cityName)
         self.setupCollectionView()
     }
     

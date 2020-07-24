@@ -35,6 +35,7 @@
 		DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */; };
 		DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */; };
 		DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */; };
+		DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28E24CAAFAE006B0344 /* Location.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -112,6 +113,7 @@
 		DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		DB7DA28E24CAAFAE006B0344 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCEE27224C9494E00FD6A0F /* Condition.swift */,
+				DB7DA28E24CAAFAE006B0344 /* Location.swift */,
 				DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */,
 			);
 			path = Model;
@@ -512,6 +515,7 @@
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
+				DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */,
 				DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */,
 				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
 				DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */,

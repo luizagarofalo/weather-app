@@ -12,8 +12,8 @@ import UIKit
 class HubCoordinator {
     
     // MARK: - Properties
-    private var viewModel: HubViewModel?
-    private var viewController: HubViewController?
+    var viewModel: HubViewModel?
+    var viewController: HubViewController?
     
     private let navigation: UINavigationController = {
         let navigationController = UINavigationController()
@@ -24,6 +24,10 @@ class HubCoordinator {
     func start() -> HubViewController {
         let viewModel = HubViewModel()
         let viewController = HubViewController(viewModel: viewModel)
+        
+        self.viewModel = viewModel
+        self.viewController = viewController
+        
         navigation.pushViewController(viewController, animated: true)
         return viewController
     }
