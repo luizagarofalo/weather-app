@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		DB52778524CA0657002DCF4D /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */; };
 		DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778624CA068C002DCF4D /* UIView+Extension.swift */; };
+		DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778D24CA0D23002DCF4D /* TabBarController.swift */; };
+		DB52779024CA0D23002DCF4D /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52778E24CA0D23002DCF4D /* TabBarController.xib */; };
+		DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */; };
+		DB52779924CA2EB0002DCF4D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779824CA2EB0002DCF4D /* TabBarCoordinator.swift */; };
+		DB52779E24CA36D3002DCF4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779C24CA36D3002DCF4D /* SearchViewController.swift */; };
+		DB52779F24CA36D3002DCF4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52779D24CA36D3002DCF4D /* SearchViewController.xib */; };
+		DB5277A224CA373C002DCF4D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5277A124CA373C002DCF4D /* SearchViewModel.swift */; };
+		DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5277A424CA379E002DCF4D /* SearchCoordinator.swift */; };
 		DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */; };
 		DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */; };
 		DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB53F7C324C61DD9001A3DD5 /* Assets.xcassets */; };
@@ -25,6 +33,8 @@
 		DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F924C78797001A3DD5 /* HubViewModel.swift */; };
 		DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */; };
 		DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */; };
+		DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */; };
+		DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -72,6 +82,14 @@
 /* Begin PBXFileReference section */
 		DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		DB52778624CA068C002DCF4D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DB52778D24CA0D23002DCF4D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DB52778E24CA0D23002DCF4D /* TabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		DB52779824CA2EB0002DCF4D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		DB52779C24CA36D3002DCF4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DB52779D24CA36D3002DCF4D /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		DB5277A124CA373C002DCF4D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DB5277A424CA379E002DCF4D /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		DB53F7B724C61DD8001A3DD5 /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +110,8 @@
 		DB53F7F924C78797001A3DD5 /* HubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModel.swift; sourceTree = "<group>"; };
 		DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
+		DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -132,10 +152,82 @@
 		DB52778324CA057D002DCF4D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */,
 				DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */,
+				DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */,
+				DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */,
 				DB52778624CA068C002DCF4D /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB52778824CA0B13002DCF4D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB52778324CA057D002DCF4D /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DB52778C24CA0CE3002DCF4D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DB52779624CA1544002DCF4D /* Coordinator */,
+				DB52779724CA1550002DCF4D /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DB52779624CA1544002DCF4D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DB52779824CA2EB0002DCF4D /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DB52779724CA1550002DCF4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB52778D24CA0D23002DCF4D /* TabBarController.swift */,
+				DB52778E24CA0D23002DCF4D /* TabBarController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB52779A24CA34C4002DCF4D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB5277A324CA378E002DCF4D /* Coordinator */,
+				DB5277A024CA3731002DCF4D /* ViewModel */,
+				DB52779B24CA34DE002DCF4D /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB52779B24CA34DE002DCF4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB52779C24CA36D3002DCF4D /* SearchViewController.swift */,
+				DB52779D24CA36D3002DCF4D /* SearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB5277A024CA3731002DCF4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB5277A124CA373C002DCF4D /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB5277A324CA378E002DCF4D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DB5277A424CA379E002DCF4D /* SearchCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		DB53F7AE24C61DD8001A3DD5 = {
@@ -162,8 +254,8 @@
 			children = (
 				DB53F7BA24C61DD8001A3DD5 /* AppDelegate.swift */,
 				DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */,
+				DB52778824CA0B13002DCF4D /* Common */,
 				DB53F7DC24C61E47001A3DD5 /* Coordinator */,
-				DB52778324CA057D002DCF4D /* Extensions */,
 				DB53F7F424C65D6F001A3DD5 /* Model */,
 				DB53F7EF24C645A6001A3DD5 /* Network */,
 				DB53F7E124C61F51001A3DD5 /* Sections */,
@@ -194,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				DB53F7E224C61F58001A3DD5 /* Hub */,
+				DB52779A24CA34C4002DCF4D /* Search */,
+				DB52778C24CA0CE3002DCF4D /* TabBar */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -379,6 +473,7 @@
 				DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */,
 				DBCEE27524C954A300FD6A0F /* cloudy.json in Resources */,
 				DBCEE27124C93C1800FD6A0F /* fog.json in Resources */,
+				DB52779024CA0D23002DCF4D /* TabBarController.xib in Resources */,
 				DBCEE27F24C95B6D00FD6A0F /* loading.json in Resources */,
 				DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */,
 				DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */,
@@ -388,6 +483,7 @@
 				DBCEE26E24C93C1800FD6A0F /* windy.json in Resources */,
 				DBCEE27724C954B400FD6A0F /* rain.json in Resources */,
 				DBCEE27B24C954F700FD6A0F /* clear-night.json in Resources */,
+				DB52779F24CA36D3002DCF4D /* SearchViewController.xib in Resources */,
 				DBCEE27924C954CA00FD6A0F /* snow.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,20 +502,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5277A224CA373C002DCF4D /* SearchViewModel.swift in Sources */,
 				DB52778524CA0657002DCF4D /* UICollectionView+Extension.swift in Sources */,
 				DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */,
 				DBCEE27324C9494E00FD6A0F /* Condition.swift in Sources */,
 				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
+				DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */,
+				DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
+				DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
+				DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */,
 				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
 				DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */,
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
+				DB52779E24CA36D3002DCF4D /* SearchViewController.swift in Sources */,
 				DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */,
 				DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */,
 				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
+				DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */,
+				DB52779924CA2EB0002DCF4D /* TabBarCoordinator.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

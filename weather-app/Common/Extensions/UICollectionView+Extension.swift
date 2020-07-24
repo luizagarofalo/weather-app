@@ -6,7 +6,6 @@
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UICollectionView {

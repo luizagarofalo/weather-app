@@ -25,6 +25,7 @@ class HubViewController: UIViewController {
     
     init(viewModel: HubViewModel) {
         super.init(nibName: nil, bundle: nil)
+        self.tabBarItem.image = #imageLiteral(resourceName: "calendar")
         self.viewModel = viewModel
         self.viewModel.viewDelegate = self
     }
@@ -34,6 +35,10 @@ class HubViewController: UIViewController {
         super.viewDidLoad()
         self.viewModel.startLocationManager()
         self.setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
     }
     
     // MARK: - Private Methods

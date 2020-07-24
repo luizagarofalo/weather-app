@@ -1,19 +1,19 @@
 //
-//  HubCoordinator.swift
+//  SearchCoordinator.swift
 //  weather-app
 //
-//  Created by Luiza Collado Garofalo on 20/07/20.
+//  Created by Luiza Collado Garofalo on 23/07/20.
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class HubCoordinator {
+class SearchCoordinator {
     
     // MARK: - Properties
-    private var viewModel: HubViewModel?
-    private var viewController: HubViewController?
+    private var viewModel: SearchViewModel?
+    private var viewController: SearchViewController?
     
     private let navigation: UINavigationController = {
         let navigationController = UINavigationController()
@@ -21,9 +21,9 @@ class HubCoordinator {
     }()
     
     // MARK: - Public Methods
-    func start() -> HubViewController {
-        let viewModel = HubViewModel()
-        let viewController = HubViewController(viewModel: viewModel)
+    func start() -> SearchViewController {
+        let viewModel = SearchViewModel()
+        let viewController = SearchViewController(viewModel: viewModel)
         navigation.pushViewController(viewController, animated: true)
         return viewController
     }
