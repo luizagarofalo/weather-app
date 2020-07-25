@@ -31,6 +31,8 @@ class HubViewModel: NSObject {
     
     // MARK: - Public Methods
     func fetchCurrentWeather(_ location: Location) {
+        self.viewDelegate?.didStartLoading()
+        
         let router: Router
         switch location {
         case .cityName:
@@ -39,14 +41,13 @@ class HubViewModel: NSObject {
             router = Router.current(latitude, longitude, nil)
         }
         
-        self.viewDelegate?.didStartLoading()
         service.request(router: router) { (result: Result<WeatherModel, Error>) in
             switch result {
             case .success(let weather):
                 self.weather = weather
                 self.viewDelegate?.didFinishLoading()
-            case .failure(let error):
-                print(error)
+            case .failure:
+                self.viewDelegate?.didFinishLoadingWithError()
             }
         }
     }

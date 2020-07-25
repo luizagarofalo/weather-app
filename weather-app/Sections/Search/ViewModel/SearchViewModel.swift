@@ -10,7 +10,7 @@ import CoreLocation
 import Foundation
 
 protocol SearchViewModelCoordinatorDelegate: AnyObject {
-    func didSelectCityName(_ cityName: String)
+    func didSelectCity(_ name: String)
     func didSelectCurrentLocation(latitude: String, longitude: String)
 }
 
@@ -25,26 +25,33 @@ class SearchViewModel: NSObject {
     
     weak var coordinatorDelegate: SearchViewModelCoordinatorDelegate?
     
+    // MARK: - Initializers
+    override init() {
+        super.init()
+        self.locationManager.delegate = self
+    }
+    
     // MARK: - Private Methods
     private func checkAuthorizationStatus(status: CLAuthorizationStatus? = nil) {
         switch status ?? CLLocationManager.authorizationStatus() {
-        case .denied, .notDetermined, .restricted:
-            locationManager.stopUpdatingLocation()
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
+        case .denied, .restricted:
+            locationManager.stopUpdatingLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
         @unknown default:
             break
         }
     }
     
     // MARK: - Public Methods
-    func startLocationManager() {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+    func searchCity(_ name: String) {
+        coordinatorDelegate?.didSelectCity(name)
     }
     
-    func searchCity() {
-        coordinatorDelegate?.didSelectCityName("São Paulo")
+    func useCurrentLocation() {
+        checkAuthorizationStatus()
     }
 }
 

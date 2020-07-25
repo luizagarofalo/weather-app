@@ -15,6 +15,11 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     // MARK: - Properties
+    private var isButtonEnabled: Bool {
+        guard let cityName = searchTextField.text else { return false }
+        return !cityName.isEmpty
+    }
+    
     var viewModel: SearchViewModel!
     
     // MARK: - Initializers
@@ -31,14 +36,49 @@ class SearchViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextField()
+    }
+    
+    // MARK: - Private Methods
+    private func enableButton() {
+        searchButton.isEnabled = isButtonEnabled
+        searchButton.alpha = isButtonEnabled ? 1 : 0.4
+    }
+    
+    private func validateAndProceed() {
+        guard let cityName = searchTextField.text, !cityName.isEmpty else { return }
+        self.viewModel.searchCity(cityName)
+    }
+    
+    private func setupTextField() {
+        _ = searchTextField.resignFirstResponder()
+        searchTextField.delegate = self
+        searchTextField.returnKeyType = .go
+        enableButton()
     }
     
     // MARK: - Actions
     @IBAction func search(_ sender: UIButton) {
-        self.viewModel.searchCity()
+        self.validateAndProceed()
     }
     
     @IBAction func useCurrentLocation(_ sender: UIButton) {
-        self.viewModel.startLocationManager()
+        self.viewModel.useCurrentLocation()
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        searchTextField.resignFirstResponder()
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        enableButton()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        validateAndProceed()
+        return true
     }
 }

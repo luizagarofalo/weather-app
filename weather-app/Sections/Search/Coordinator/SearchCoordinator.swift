@@ -47,8 +47,8 @@ class SearchCoordinator {
 }
 
 extension SearchCoordinator: SearchViewModelCoordinatorDelegate {
-    func didSelectCityName(_ cityName: String) {
-        delegate?.didSelectCityName(cityName)
+    func didSelectCity(_ name: String) {
+        delegate?.didSelectCityName(name)
     }
     
     func didSelectCurrentLocation(latitude: String, longitude: String) {
