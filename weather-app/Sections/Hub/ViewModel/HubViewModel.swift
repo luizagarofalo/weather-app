@@ -12,7 +12,7 @@ import Foundation
 protocol HubViewModelViewDelegate: AnyObject {
     func didStartLoading()
     func didFinishLoading()
-    func didFinishLoadingWithError()
+    func didFinishLoadingWithError(_ error: CustomError)
 }
 
 class HubViewModel: NSObject {
@@ -41,13 +41,13 @@ class HubViewModel: NSObject {
             router = Router.current(latitude, longitude, nil)
         }
         
-        service.request(router: router) { (result: Result<WeatherModel, Error>) in
+        service.request(router: router) { (result: Result<WeatherModel, CustomError>) in
             switch result {
             case .success(let weather):
                 self.weather = weather
                 self.viewDelegate?.didFinishLoading()
-            case .failure:
-                self.viewDelegate?.didFinishLoadingWithError()
+            case .failure(let error):
+                self.viewDelegate?.didFinishLoadingWithError(error)
             }
         }
     }

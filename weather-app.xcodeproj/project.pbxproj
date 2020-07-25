@@ -36,6 +36,7 @@
 		DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */; };
 		DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */; };
 		DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28E24CAAFAE006B0344 /* Location.swift */; };
+		DB7DA29424CBED5B006B0344 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA29324CBED5B006B0344 /* CustomError.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -114,6 +115,7 @@
 		DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DB7DA28E24CAAFAE006B0344 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DB7DA29324CBED5B006B0344 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		DB53F7EF24C645A6001A3DD5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DA29324CBED5B006B0344 /* CustomError.swift */,
 				DB53F7F024C645BC001A3DD5 /* Router.swift */,
 				DB53F7F224C65B17001A3DD5 /* Service.swift */,
 			);
@@ -528,6 +531,7 @@
 				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
 				DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */,
 				DB52779924CA2EB0002DCF4D /* TabBarCoordinator.swift in Sources */,
+				DB7DA29424CBED5B006B0344 /* CustomError.swift in Sources */,
 				DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

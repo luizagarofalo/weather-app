@@ -33,7 +33,6 @@ class HubViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.fetchCurrentWeather(.cityName)
         self.setupCollectionView()
     }
     
@@ -61,8 +60,17 @@ extension HubViewController: HubViewModelViewDelegate {
         self.collectionView.reloadData()
     }
     
-    func didFinishLoadingWithError() {
-        // TODO: Add error view.
+    func didFinishLoadingWithError(_ error: CustomError) {
+        switch error {
+        case .api:
+            print("Erro de API – tente novamente mais tarde.")
+        case .network:
+            print("Erro de Network – verifique sua conexão e tente novamente.")
+        case .parse:
+            print("Erro de Parse – eita, deu ruim.")
+        case .unknown:
+            print("Erro desconhecido.")
+        }
     }
 }
 

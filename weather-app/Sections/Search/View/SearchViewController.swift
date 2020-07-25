@@ -59,11 +59,12 @@ class SearchViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func search(_ sender: UIButton) {
-        self.validateAndProceed()
+        searchTextField.resignFirstResponder()
+        validateAndProceed()
     }
     
     @IBAction func useCurrentLocation(_ sender: UIButton) {
-        self.viewModel.useCurrentLocation()
+        viewModel.useCurrentLocation()
     }
 }
 
