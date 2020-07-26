@@ -6,7 +6,6 @@
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
-import CoreLocation
 import Foundation
 
 protocol HubViewModelViewDelegate: AnyObject {
@@ -15,23 +14,23 @@ protocol HubViewModelViewDelegate: AnyObject {
     func didFinishLoadingWithError(_ error: CustomError)
 }
 
-class HubViewModel: NSObject {
+class HubViewModel {
     
     // MARK: - Properties
-    private var locationCoordinate: CLLocationCoordinate2D?
-    private var locationManager = CLLocationManager()
     private var service = Service()
     
     var cityName: String?
     var latitude: String?
     var longitude: String?
+    var location: Location?
     var weather: WeatherModel?
     
     weak var viewDelegate: HubViewModelViewDelegate?
     
     // MARK: - Public Methods
-    func fetchCurrentWeather(_ location: Location) {
+    func fetchCurrentWeather() {
         self.viewDelegate?.didStartLoading()
+        guard let location = location else { return }
         
         let router: Router
         switch location {

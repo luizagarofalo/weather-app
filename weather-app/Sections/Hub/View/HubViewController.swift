@@ -15,7 +15,8 @@ class HubViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var isLoading = true
+    private var errorView: ErrorViewController?
+    private var isLoading = true
     var viewModel: HubViewModel!
     
     // MARK: - Initializers
@@ -48,11 +49,29 @@ class HubViewController: UIViewController {
         self.collectionView.register(CurrentWeatherCollectionViewCell.self)
         self.collectionView.register(CurrentWeatherSkeletonCollectionViewCell.self)
     }
+    
+    private func showErrorView(_ error: CustomError) {
+        let errorViewModel = ErrorViewModel(error: error)
+        errorViewModel.delegate = self
+        let errorView = ErrorViewController(viewModel: errorViewModel)
+        errorView.view.frame = self.view.bounds
+        self.view.insertSubview(errorView.view, aboveSubview: self.collectionView)
+        self.view.layoutSubviews()
+        self.errorView = errorView
+    }
+    
+    private func removeErrorViewIfNeeded() {
+        if errorView != nil {
+            errorView?.view.removeFromSuperview()
+            errorView = nil
+        }
+    }
 }
 
 extension HubViewController: HubViewModelViewDelegate {
     func didStartLoading() {
         self.isLoading = true
+        self.removeErrorViewIfNeeded()
     }
     
     func didFinishLoading() {
@@ -61,16 +80,15 @@ extension HubViewController: HubViewModelViewDelegate {
     }
     
     func didFinishLoadingWithError(_ error: CustomError) {
-        switch error {
-        case .api:
-            print("Erro de API – tente novamente mais tarde.")
-        case .network:
-            print("Erro de Network – verifique sua conexão e tente novamente.")
-        case .parse:
-            print("Erro de Parse – eita, deu ruim.")
-        case .unknown:
-            print("Erro desconhecido.")
+        DispatchQueue.main.async {
+            self.showErrorView(error)
         }
+    }
+}
+
+extension HubViewController: ErrorViewModelDelegate {
+    func didTryAgain() {
+        self.viewModel.fetchCurrentWeather()
     }
 }
 

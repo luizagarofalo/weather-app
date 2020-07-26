@@ -41,13 +41,15 @@ extension TabBarCoordinator: SearchCoordinatorDelegate {
     func didSelectCityName(_ cityName: String) {
         tabBar?.selectedIndex = 0
         hubCoordinator.viewModel?.cityName = cityName
-        hubCoordinator.viewModel?.fetchCurrentWeather(.cityName)
+        hubCoordinator.viewModel?.location = .cityName
+        hubCoordinator.viewModel?.fetchCurrentWeather()
     }
     
     func didSelectCurrentLocation(latitude: String, longitude: String) {
         tabBar?.selectedIndex = 0
         hubCoordinator.viewModel?.latitude = latitude
         hubCoordinator.viewModel?.longitude = longitude
-        hubCoordinator.viewModel?.fetchCurrentWeather(.coordinates)
+        hubCoordinator.viewModel?.location = .coordinates
+        hubCoordinator.viewModel?.fetchCurrentWeather()
     }
 }

@@ -37,6 +37,10 @@
 		DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */; };
 		DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA28E24CAAFAE006B0344 /* Location.swift */; };
 		DB7DA29424CBED5B006B0344 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA29324CBED5B006B0344 /* CustomError.swift */; };
+		DB7DA29824CCC081006B0344 /* network-error.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA29724CCC080006B0344 /* network-error.json */; };
+		DB7DA29B24CCC0E4006B0344 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA29924CCC0E4006B0344 /* ErrorViewController.swift */; };
+		DB7DA29C24CCC0E4006B0344 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA29A24CCC0E4006B0344 /* ErrorViewController.xib */; };
+		DB7DA2A124CD331F006B0344 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DA2A024CD331F006B0344 /* ErrorViewModel.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -116,6 +120,10 @@
 		DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DB7DA28E24CAAFAE006B0344 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DB7DA29324CBED5B006B0344 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		DB7DA29724CCC080006B0344 /* network-error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "network-error.json"; sourceTree = "<group>"; };
+		DB7DA29924CCC0E4006B0344 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		DB7DA29A24CCC0E4006B0344 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		DB7DA2A024CD331F006B0344 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -289,6 +297,7 @@
 		DB53F7E124C61F51001A3DD5 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DA29D24CCC8DA006B0344 /* Error */,
 				DB53F7E224C61F58001A3DD5 /* Hub */,
 				DB52779A24CA34C4002DCF4D /* Search */,
 				DB52778C24CA0CE3002DCF4D /* TabBar */,
@@ -366,6 +375,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DB7DA29D24CCC8DA006B0344 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DA29E24CCC8EB006B0344 /* View */,
+				DB7DA29F24CCC8EF006B0344 /* ViewModel */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DB7DA29E24CCC8EB006B0344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DA29924CCC0E4006B0344 /* ErrorViewController.swift */,
+				DB7DA29A24CCC0E4006B0344 /* ErrorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB7DA29F24CCC8EF006B0344 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DA2A024CD331F006B0344 /* ErrorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DBCEE26224C93AD600FD6A0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +418,7 @@
 				DBCEE27424C954A300FD6A0F /* cloudy.json */,
 				DBCEE26D24C93C1800FD6A0F /* fog.json */,
 				DBCEE27E24C95B6D00FD6A0F /* loading.json */,
+				DB7DA29724CCC080006B0344 /* network-error.json */,
 				DBCEE27624C954B400FD6A0F /* rain.json */,
 				DBCEE27824C954CA00FD6A0F /* snow.json */,
 				DBCEE26C24C93C1800FD6A0F /* thunderstorm.json */,
@@ -479,6 +515,7 @@
 				DB53F7E824C61F76001A3DD5 /* HubViewController.xib in Resources */,
 				DBCEE27524C954A300FD6A0F /* cloudy.json in Resources */,
 				DBCEE27124C93C1800FD6A0F /* fog.json in Resources */,
+				DB7DA29824CCC081006B0344 /* network-error.json in Resources */,
 				DB52779024CA0D23002DCF4D /* TabBarController.xib in Resources */,
 				DBCEE27F24C95B6D00FD6A0F /* loading.json in Resources */,
 				DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */,
@@ -490,6 +527,7 @@
 				DBCEE27724C954B400FD6A0F /* rain.json in Resources */,
 				DBCEE27B24C954F700FD6A0F /* clear-night.json in Resources */,
 				DB52779F24CA36D3002DCF4D /* SearchViewController.xib in Resources */,
+				DB7DA29C24CCC0E4006B0344 /* ErrorViewController.xib in Resources */,
 				DBCEE27924C954CA00FD6A0F /* snow.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +556,7 @@
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
+				DB7DA29B24CCC0E4006B0344 /* ErrorViewController.swift in Sources */,
 				DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */,
 				DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */,
 				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
@@ -525,6 +564,7 @@
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,
+				DB7DA2A124CD331F006B0344 /* ErrorViewModel.swift in Sources */,
 				DB52779E24CA36D3002DCF4D /* SearchViewController.swift in Sources */,
 				DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */,
 				DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */,

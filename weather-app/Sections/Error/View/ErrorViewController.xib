@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorViewController" customModule="weather_app" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="7ZY-tw-VnY" id="Deq-XF-EWG"/>
+                <outlet property="animationView" destination="BFR-WY-tcD" id="aYF-5P-TS3"/>
+                <outlet property="errorDescription" destination="2dN-sg-Yfa" id="qfZ-RI-Vgd"/>
+                <outlet property="errorTitle" destination="8MM-Hd-JsW" id="WXo-jO-oHf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MM-Hd-JsW" userLabel="City Name Label">
+                    <rect key="frame" x="16" y="80" width="288" height="29"/>
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                    <color key="textColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dN-sg-Yfa" userLabel="Weather Condition Label">
+                    <rect key="frame" x="16" y="125" width="288" height="42"/>
+                    <string key="text">Couldn't connect to internet.
+Please check your network settings.</string>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                    <color key="textColor" red="0.68568458750000005" green="0.68014484450000001" blue="0.83821779819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZY-tw-VnY">
+                    <rect key="frame" x="108" y="375" width="104" height="48"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="lyL-w6-Uec"/>
+                        <constraint firstAttribute="width" constant="104" id="vdl-MT-aKa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                    <state key="normal" title="Try again">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tryAgain:" destination="-1" eventType="touchUpInside" id="jQo-Yb-VVx"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFR-WY-tcD">
+                    <rect key="frame" x="80" y="191" width="160" height="160"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="H7D-V6-U9M"/>
+                        <constraint firstAttribute="height" constant="160" id="KIV-OA-P1u"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2dN-sg-Yfa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7j5-sO-cwk"/>
+                <constraint firstItem="BFR-WY-tcD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RNw-5c-SXC"/>
+                <constraint firstItem="8MM-Hd-JsW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="T6H-FS-pBH"/>
+                <constraint firstItem="7ZY-tw-VnY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Unn-rx-sZl"/>
+                <constraint firstItem="8MM-Hd-JsW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aDw-mr-8BZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8MM-Hd-JsW" secondAttribute="trailing" constant="16" id="dRg-Cv-0GB"/>
+                <constraint firstItem="7ZY-tw-VnY" firstAttribute="top" secondItem="BFR-WY-tcD" secondAttribute="bottom" constant="24" id="dzb-DR-uC7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2dN-sg-Yfa" secondAttribute="trailing" constant="16" id="gl4-mx-w8W"/>
+                <constraint firstItem="BFR-WY-tcD" firstAttribute="top" secondItem="2dN-sg-Yfa" secondAttribute="bottom" constant="24" id="izI-o3-w4X"/>
+                <constraint firstItem="2dN-sg-Yfa" firstAttribute="top" secondItem="8MM-Hd-JsW" secondAttribute="bottom" constant="16" id="pRd-5a-0bT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>
