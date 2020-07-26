@@ -30,26 +30,16 @@ class TabBarCoordinator: Coordinator {
         window.rootViewController = tabBar
         searchCoordinator.delegate = self
     }
-    
-    func stop() {
-        hubCoordinator = nil
-        tabBar = nil
-    }
 }
 
 extension TabBarCoordinator: SearchCoordinatorDelegate {
     func didSelectCityName(_ cityName: String) {
         tabBar?.selectedIndex = 0
-        hubCoordinator.viewModel?.cityName = cityName
-        hubCoordinator.viewModel?.location = .cityName
-        hubCoordinator.viewModel?.fetchCurrentWeather()
+        hubCoordinator.updateLocation(city: cityName, location: .cityName)
     }
     
     func didSelectCurrentLocation(latitude: String, longitude: String) {
         tabBar?.selectedIndex = 0
-        hubCoordinator.viewModel?.latitude = latitude
-        hubCoordinator.viewModel?.longitude = longitude
-        hubCoordinator.viewModel?.location = .coordinates
-        hubCoordinator.viewModel?.fetchCurrentWeather()
+        hubCoordinator.updateLocation(lat: latitude, lon: longitude, location: .coordinates)
     }
 }

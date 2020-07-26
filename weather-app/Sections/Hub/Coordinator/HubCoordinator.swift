@@ -32,8 +32,7 @@ class HubCoordinator {
         return viewController
     }
     
-    func stop() {
-        viewModel = nil
-        viewController = nil
+    func updateLocation(city: String? = nil, lat: String? = nil, lon: String? = nil, location: Location? = nil) {
+        viewModel?.updateLocation(city: city, lat: lat, lon: lon, location: location)
     }
 }

@@ -39,11 +39,6 @@ class SearchCoordinator {
         navigation.pushViewController(viewController, animated: true)
         return viewController
     }
-    
-    func stop() {
-        viewModel = nil
-        viewController = nil
-    }
 }
 
 extension SearchCoordinator: SearchViewModelCoordinatorDelegate {

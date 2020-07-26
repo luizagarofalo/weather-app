@@ -50,4 +50,12 @@ class HubViewModel {
             }
         }
     }
+    
+    func updateLocation(city: String? = nil, lat: String? = nil, lon: String? = nil, location: Location? = nil) {
+        self.cityName = city
+        self.latitude = lat
+        self.longitude = lon
+        self.location = location
+        self.fetchCurrentWeather()
+    }
 }
