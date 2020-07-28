@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SingleHourlyForecastCollectionViewCell" customModule="weather_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpD-iH-M8l">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emX-zP-8sl">
+                                <rect key="frame" x="18" y="0.0" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="4zs-0w-uoe"/>
+                                    <constraint firstAttribute="height" constant="64" id="XqM-YX-9jA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuo-by-VPp">
+                                <rect key="frame" x="16" y="68" width="68" height="19"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-JQ-MPn">
+                                <rect key="frame" x="16" y="91" width="68" height="17"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dK2-JQ-MPn" secondAttribute="trailing" constant="16" id="6V6-eK-sFZ"/>
+                            <constraint firstItem="dK2-JQ-MPn" firstAttribute="top" secondItem="Uuo-by-VPp" secondAttribute="bottom" constant="4" id="B5W-Tr-eZm"/>
+                            <constraint firstItem="emX-zP-8sl" firstAttribute="top" secondItem="IpD-iH-M8l" secondAttribute="top" id="NOT-ir-Q4z"/>
+                            <constraint firstItem="dK2-JQ-MPn" firstAttribute="leading" secondItem="IpD-iH-M8l" secondAttribute="leading" constant="16" id="QS7-Ph-Cap"/>
+                            <constraint firstItem="emX-zP-8sl" firstAttribute="centerX" secondItem="IpD-iH-M8l" secondAttribute="centerX" id="jGX-xq-PMP"/>
+                            <constraint firstItem="Uuo-by-VPp" firstAttribute="leading" secondItem="IpD-iH-M8l" secondAttribute="leading" constant="16" id="qhz-tn-i0z"/>
+                            <constraint firstItem="Uuo-by-VPp" firstAttribute="top" secondItem="emX-zP-8sl" secondAttribute="bottom" constant="4" id="rxa-Km-zS6"/>
+                            <constraint firstAttribute="trailing" secondItem="Uuo-by-VPp" secondAttribute="trailing" constant="16" id="vj0-Nk-0Ud"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="IpD-iH-M8l" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CX7-vM-8zx"/>
+                <constraint firstAttribute="bottom" secondItem="IpD-iH-M8l" secondAttribute="bottom" id="Lyd-ZK-PTU"/>
+                <constraint firstItem="IpD-iH-M8l" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dv8-qQ-MiM"/>
+                <constraint firstAttribute="trailing" secondItem="IpD-iH-M8l" secondAttribute="trailing" id="nh8-eJ-Fsz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="animationView" destination="emX-zP-8sl" id="U0u-VB-x83"/>
+                <outlet property="hourLabel" destination="Uuo-by-VPp" id="ZJy-Tu-Taf"/>
+                <outlet property="weatherLabel" destination="dK2-JQ-MPn" id="gWF-uK-NNC"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

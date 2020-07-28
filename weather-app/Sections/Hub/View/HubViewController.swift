@@ -46,7 +46,9 @@ class HubViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.alwaysBounceVertical = true
+        self.collectionView.isScrollEnabled = !UIDevice().hasNotch
         self.collectionView.register(CurrentWeatherCollectionViewCell.self)
+        self.collectionView.register(HourlyForecastCollectionViewCell.self)
         self.collectionView.register(CurrentWeatherSkeletonCollectionViewCell.self)
     }
     
@@ -93,22 +95,35 @@ extension HubViewController: ErrorViewModelDelegate {
 }
 
 extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if isLoading {
-            return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
-        } else {
-            return collectionView.dequeueReusableCell(of: CurrentWeatherCollectionViewCell.self, for: indexPath) { cell in
-                guard let weather = self.viewModel.weather else { return }
-                cell.setup(weather)
+        if indexPath.section == 0 {
+            if isLoading {
+                return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
+            } else {
+                return collectionView.dequeueReusableCell(of: CurrentWeatherCollectionViewCell.self, for: indexPath) { cell in
+                    guard let weather = self.viewModel.weather else { return }
+                    cell.setup(weather)
+                }
             }
+        } else {
+            return collectionView.dequeueReusableCell(of: HourlyForecastCollectionViewCell.self, for: indexPath)
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.size.width, height: 480)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let screenHeight = UIScreen.main.bounds.height
+        let height: CGFloat = indexPath.section == 0 ? (screenHeight * 0.65) : (screenHeight * 0.25)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: height)
     }
 }

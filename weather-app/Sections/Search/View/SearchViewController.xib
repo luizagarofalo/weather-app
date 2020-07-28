@@ -21,7 +21,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVN-N6-6Vm">
                     <rect key="frame" x="-8" y="470" width="336" height="25"/>
-                    <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="e11-ss-2Ml"/>
                     </constraints>
