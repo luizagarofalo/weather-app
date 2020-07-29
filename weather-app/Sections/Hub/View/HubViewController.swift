@@ -76,13 +76,22 @@ extension HubViewController: HubViewModelViewDelegate {
         self.removeErrorViewIfNeeded()
     }
     
-    func didFinishLoading() {
-        self.isLoading = false
+    func didFinishLoading(_ request: HubViewModel.Request) {
+        switch request {
+        case .current:
+            self.isLoading = true
+            self.viewModel.fetchHourlyForecast()
+        case .forecast:
+            self.isLoading = false
+        }
+        
         self.collectionView.reloadData()
+
     }
     
     func didFinishLoadingWithError(_ error: CustomError) {
         DispatchQueue.main.async {
+            self.isLoading = false
             self.showErrorView(error)
         }
     }
@@ -104,6 +113,7 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if indexPath.section == 0 {
             if isLoading {
                 return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
@@ -114,7 +124,9 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
                 }
             }
         } else {
-            return collectionView.dequeueReusableCell(of: HourlyForecastCollectionViewCell.self, for: indexPath)
+            return collectionView.dequeueReusableCell(of: HourlyForecastCollectionViewCell.self, for: indexPath) { cell in
+                cell.setup(self.isLoading)
+            }
         }
     }
     

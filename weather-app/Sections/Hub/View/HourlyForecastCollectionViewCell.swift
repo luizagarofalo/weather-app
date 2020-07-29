@@ -13,6 +13,9 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Properties
+    var isLoading = false
+    
     // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +29,12 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
         self.collectionView.alwaysBounceHorizontal = true
         self.collectionView.register(SingleHourlyForecastCollectionViewCell.self)
     }
+    
+    // MARK: – Public Methods
+    func setup(_ isLoading: Bool) {
+        self.isLoading = isLoading
+        self.collectionView.reloadData()
+    }
 }
 
 extension HourlyForecastCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -35,7 +44,7 @@ extension HourlyForecastCollectionViewCell: UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(of: SingleHourlyForecastCollectionViewCell.self, for: indexPath) { cell in
-            cell.setup()
+            cell.setup(self.isLoading)
         }
     }
     

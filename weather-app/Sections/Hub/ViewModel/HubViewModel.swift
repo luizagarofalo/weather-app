@@ -10,11 +10,16 @@ import Foundation
 
 protocol HubViewModelViewDelegate: AnyObject {
     func didStartLoading()
-    func didFinishLoading()
+    func didFinishLoading(_ request: HubViewModel.Request)
     func didFinishLoadingWithError(_ error: CustomError)
 }
 
 class HubViewModel {
+    
+    enum Request {
+        case current
+        case forecast
+    }
     
     // MARK: - Properties
     private var service = Service()
@@ -23,7 +28,8 @@ class HubViewModel {
     var latitude: String?
     var longitude: String?
     var location: Location?
-    var weather: WeatherModel?
+    var hourlyForecast: HourlyForecast?
+    var weather: CurrentWeather?
     
     weak var viewDelegate: HubViewModelViewDelegate?
     
@@ -40,11 +46,26 @@ class HubViewModel {
             router = Router.current(latitude, longitude, nil)
         }
         
-        service.request(router: router) { (result: Result<WeatherModel, CustomError>) in
+        service.request(router: router) { (result: Result<CurrentWeather, CustomError>) in
             switch result {
             case .success(let weather):
                 self.weather = weather
-                self.viewDelegate?.didFinishLoading()
+                self.latitude = "\(weather.coord.lat)"
+                self.longitude = "\(weather.coord.lon)"
+                self.viewDelegate?.didFinishLoading(.current)
+            case .failure(let error):
+                self.viewDelegate?.didFinishLoadingWithError(error)
+            }
+        }
+    }
+    
+    func fetchHourlyForecast() {
+        let router = Router.forecast(latitude, longitude, nil)
+        service.request(router: router) { (result: Result<HourlyForecast, CustomError>) in
+            switch result {
+            case .success(let hourlyForecast):
+                self.hourlyForecast = hourlyForecast
+                self.viewDelegate?.didFinishLoading(.forecast)
             case .failure(let error):
                 self.viewDelegate?.didFinishLoadingWithError(error)
             }

@@ -7,6 +7,7 @@
 //
 
 import Lottie
+import SkeletonView
 import UIKit
 
 class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
@@ -15,6 +16,7 @@ class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var view: UIView!
     
     // MARK: - Properties
     private var weatherConditionAnimation = AnimationView()
@@ -32,8 +34,19 @@ class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
         animationView.addSubview(weatherConditionAnimation)
     }
     
+    private func showSkeleton(_ show: Bool) {
+        if show {
+            view.showAnimatedSkeleton()
+        } else {
+            DispatchQueue.main.async {
+                self.view.hideSkeleton()
+                self.addAnimation()
+            }
+        }
+    }
+    
     // MARK: - Public Methods
-    func setup() {
-        self.addAnimation()
+    func setup(_ isLoading: Bool) {
+        self.showSkeleton(isLoading)
     }
 }

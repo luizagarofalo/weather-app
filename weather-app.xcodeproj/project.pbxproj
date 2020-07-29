@@ -29,7 +29,7 @@
 		DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7E924C61F81001A3DD5 /* HubCoordinator.swift */; };
 		DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F024C645BC001A3DD5 /* Router.swift */; };
 		DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F224C65B17001A3DD5 /* Service.swift */; };
-		DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */; };
+		DB53F7F624C65DA3001A3DD5 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F524C65DA3001A3DD5 /* CurrentWeather.swift */; };
 		DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7F924C78797001A3DD5 /* HubViewModel.swift */; };
 		DB53F80424C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */; };
 		DB53F80524C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */; };
@@ -54,6 +54,8 @@
 		DB7DA2B724CE4D6E006B0344 /* clear-night-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2B624CE4D6E006B0344 /* clear-night-b.json */; };
 		DB7DA2B924CE4DE7006B0344 /* clear-day-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2B824CE4DE7006B0344 /* clear-day-b.json */; };
 		DB7DA2BB24CE4E6F006B0344 /* windy-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2BA24CE4E6E006B0344 /* windy-b.json */; };
+		DBB2D4C424D0F07600E0943D /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */; };
+		DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C524D0FF5E00E0943D /* Weather.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -125,7 +127,7 @@
 		DB53F7E924C61F81001A3DD5 /* HubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCoordinator.swift; sourceTree = "<group>"; };
 		DB53F7F024C645BC001A3DD5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DB53F7F224C65B17001A3DD5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		DB53F7F524C65DA3001A3DD5 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		DB53F7F924C78797001A3DD5 /* HubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModel.swift; sourceTree = "<group>"; };
 		DB53F80224C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB53F80324C924E9001A3DD5 /* CurrentWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 		DB7DA2B624CE4D6E006B0344 /* clear-night-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-night-b.json"; sourceTree = "<group>"; };
 		DB7DA2B824CE4DE7006B0344 /* clear-day-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-day-b.json"; sourceTree = "<group>"; };
 		DB7DA2BA24CE4E6E006B0344 /* windy-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "windy-b.json"; sourceTree = "<group>"; };
+		DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
+		DBB2D4C524D0FF5E00E0943D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -391,8 +395,10 @@
 			isa = PBXGroup;
 			children = (
 				DBCEE27224C9494E00FD6A0F /* Condition.swift */,
+				DB53F7F524C65DA3001A3DD5 /* CurrentWeather.swift */,
+				DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */,
 				DB7DA28E24CAAFAE006B0344 /* Location.swift */,
-				DB53F7F524C65DA3001A3DD5 /* WeatherModel.swift */,
+				DBB2D4C524D0FF5E00E0943D /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -599,18 +605,20 @@
 				DB7DA2A824CE359C006B0344 /* SingleHourlyForecastCollectionViewCell.swift in Sources */,
 				DB5277A224CA373C002DCF4D /* SearchViewModel.swift in Sources */,
 				DB52778524CA0657002DCF4D /* UICollectionView+Extension.swift in Sources */,
+				DBB2D4C424D0F07600E0943D /* HourlyForecast.swift in Sources */,
 				DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */,
 				DBCEE27324C9494E00FD6A0F /* Condition.swift in Sources */,
 				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
 				DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */,
 				DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */,
+				DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
 				DB7DA29B24CCC0E4006B0344 /* ErrorViewController.swift in Sources */,
 				DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */,
 				DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */,
-				DB53F7F624C65DA3001A3DD5 /* WeatherModel.swift in Sources */,
+				DB53F7F624C65DA3001A3DD5 /* CurrentWeather.swift in Sources */,
 				DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */,
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,

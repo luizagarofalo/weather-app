@@ -22,7 +22,7 @@ enum Condition: String {
 }
 
 
-extension WeatherModel.Weather {
+extension Weather {
     var condition: Condition {
         switch self.id {
         case 200...299:

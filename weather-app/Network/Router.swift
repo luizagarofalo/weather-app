@@ -10,7 +10,7 @@ import Foundation
 
 enum Router {
     case current(_ lat: String?, _ lon: String?, _ city: String?)
-    case forecast
+    case forecast(_ lat: String?, _ lon: String?, _ city: String?)
     
     var scheme: String {
         switch self {
@@ -21,10 +21,8 @@ enum Router {
     
     var host: String {
         switch self {
-        case .current:
+        case .current, .forecast:
             return "api.openweathermap.org"
-        case .forecast:
-            return "pro.openweathermap.org"
         }
     }
     
@@ -33,7 +31,7 @@ enum Router {
         case .current:
             return "/data/2.5/weather"
         case .forecast:
-            return "/data/2.5/forecast/hourly"
+            return "/data/2.5/onecall"
         }
     }
     
@@ -41,15 +39,12 @@ enum Router {
         let accessToken = "59191370e76ba00938f77ea19fff34d5"
         
         switch self {
-        case .current(let lat, let lon, let city):
+        case .current(let lat, let lon, let city), .forecast(let lat, let lon, let city):
             return [URLQueryItem(name: "units", value: "metric"),
                     URLQueryItem(name: "q", value: city),
                     URLQueryItem(name: "lat", value: lat),
                     URLQueryItem(name: "lon", value: lon),
-                    URLQueryItem(name: "appid", value: accessToken)]
-        case .forecast:
-            return [URLQueryItem(name: "units", value: "metric"),
-                    URLQueryItem(name: "q", value: "London"),
+                    URLQueryItem(name: "exclude", value: "current,minutely,daily"),
                     URLQueryItem(name: "appid", value: accessToken)]
         }
     }

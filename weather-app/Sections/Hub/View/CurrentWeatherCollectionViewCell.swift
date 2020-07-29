@@ -41,15 +41,15 @@ class CurrentWeatherCollectionViewCell: UICollectionViewCell {
         return formatter.string(from: date)
     }
     
-    private func setupLabels(_ weather: WeatherModel) {
+    private func setupLabels(_ weather: CurrentWeather) {
         self.cityNameLabel.text = weather.name
-        self.weatherConditionLabel.text = weather.weather[0].weatherDescription.capitalized
+        self.weatherConditionLabel.text = weather.weather[0].description.capitalized
         self.temperatureLabel.text = String(format: "%.0f", weather.main.temp)
         self.dateLabel.text = getDate()
     }
     
     // MARK: - Public Methods
-    func setup(_ weather: WeatherModel) {
+    func setup(_ weather: CurrentWeather) {
         self.setupLabels(weather)
         guard let weather = weather.weather.first else { return }
         self.addAnimation(weather.condition.rawValue)
