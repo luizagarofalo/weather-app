@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-Bf-fej">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-0S-ZYp" userLabel="City Name Skeleton View">
+                            <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-0S-ZYp" userLabel="City Name Skeleton View">
                                 <rect key="frame" x="115" y="80" width="145" height="32"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -31,7 +31,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-RK-FYI" userLabel="Weather Condition Skeleton View">
+                            <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-RK-FYI" userLabel="Weather Condition Skeleton View">
                                 <rect key="frame" x="131" y="120" width="113" height="21"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -43,7 +43,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yR-ck-tSH" userLabel="Weather Condition Skeleton View">
+                            <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yR-ck-tSH" userLabel="Weather Condition Skeleton View">
                                 <rect key="frame" x="160.5" y="300" width="54" height="45"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -55,7 +55,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-DH-BV5" userLabel="Animation View">
+                            <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-DH-BV5" userLabel="Animation View">
                                 <rect key="frame" x="87.5" y="166" width="200" height="100"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -67,7 +67,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-li-5au" userLabel="Date View">
+                            <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-li-5au" userLabel="Date View">
                                 <rect key="frame" x="159.5" y="367" width="56" height="24"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

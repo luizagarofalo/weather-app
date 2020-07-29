@@ -22,8 +22,8 @@ class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
     private var weatherConditionAnimation = AnimationView()
     
     // MARK: - Private Methods
-    private func addAnimation() {
-        let animation = Animation.named("windy-b")
+    private func addAnimation(_ animation: String) {
+        let animation = Animation.named(animation + "-b")
         
         weatherConditionAnimation.animation = animation
         weatherConditionAnimation.contentMode = .scaleAspectFit
@@ -34,19 +34,30 @@ class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
         animationView.addSubview(weatherConditionAnimation)
     }
     
+    private func getTime(_ date: Int, _ timezone: String) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(date))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: timezone)
+        dateFormatter.dateFormat = "hh:00"
+        return dateFormatter.string(from: date)
+    }
+    
     private func showSkeleton(_ show: Bool) {
-        if show {
-            view.showAnimatedSkeleton()
-        } else {
-            DispatchQueue.main.async {
-                self.view.hideSkeleton()
-                self.addAnimation()
-            }
+        DispatchQueue.main.async {
+            show ? self.view.showAnimatedSkeleton() : self.view.hideSkeleton()
+            self.weatherConditionAnimation.isHidden = show
         }
     }
     
     // MARK: - Public Methods
-    func setup(_ isLoading: Bool) {
+    func setup(_ isLoading: Bool, _ forecast: HourlyForecast.Hourly?, _ timezone: String) {
         self.showSkeleton(isLoading)
+        
+        guard let forecast = forecast else { return }
+        self.hourLabel.text = getTime(forecast.dt, timezone)
+        self.weatherLabel.text = String(format: "%.0f", forecast.temp) + "º"
+        
+        guard let weather = forecast.weather.first else { return }
+        self.addAnimation(weather.condition.rawValue)
     }
 }

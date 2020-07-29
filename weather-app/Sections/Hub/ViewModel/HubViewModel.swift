@@ -28,7 +28,7 @@ class HubViewModel {
     var latitude: String?
     var longitude: String?
     var location: Location?
-    var hourlyForecast: HourlyForecast?
+    var forecast: HourlyForecast?
     var weather: CurrentWeather?
     
     weak var viewDelegate: HubViewModelViewDelegate?
@@ -63,8 +63,8 @@ class HubViewModel {
         let router = Router.forecast(latitude, longitude, nil)
         service.request(router: router) { (result: Result<HourlyForecast, CustomError>) in
             switch result {
-            case .success(let hourlyForecast):
-                self.hourlyForecast = hourlyForecast
+            case .success(let forecast):
+                self.forecast = forecast
                 self.viewDelegate?.didFinishLoading(.forecast)
             case .failure(let error):
                 self.viewDelegate?.didFinishLoadingWithError(error)

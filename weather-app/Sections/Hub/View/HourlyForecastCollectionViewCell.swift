@@ -14,7 +14,12 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var isLoading = false
+    private var isLoading = false
+    private var forecast: HourlyForecast? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     // MARK: - Overrides
     override func awakeFromNib() {
@@ -31,20 +36,21 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: – Public Methods
-    func setup(_ isLoading: Bool) {
+    func setup(_ isLoading: Bool, _ forecast: HourlyForecast?) {
         self.isLoading = isLoading
-        self.collectionView.reloadData()
+        self.forecast = forecast
     }
 }
 
 extension HourlyForecastCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return forecast?.hourly?.count ?? 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(of: SingleHourlyForecastCollectionViewCell.self, for: indexPath) { cell in
-            cell.setup(self.isLoading)
+            let timezone = self.forecast?.timezone ?? ""
+            cell.setup(self.isLoading, self.forecast?.hourly?[indexPath.row] ?? nil, timezone)
         }
     }
     

@@ -15,7 +15,6 @@ class CurrentWeatherSkeletonCollectionViewCell: UICollectionViewCell {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        let gradient = SkeletonGradient(baseColor: UIColor.tertiarySystemGroupedBackground)
-        view.showAnimatedGradientSkeleton(usingGradient: gradient)
+        view.showAnimatedSkeleton()
     }
 }

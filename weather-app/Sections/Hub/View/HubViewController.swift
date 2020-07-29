@@ -86,7 +86,6 @@ extension HubViewController: HubViewModelViewDelegate {
         }
         
         self.collectionView.reloadData()
-
     }
     
     func didFinishLoadingWithError(_ error: CustomError) {
@@ -125,7 +124,7 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
             }
         } else {
             return collectionView.dequeueReusableCell(of: HourlyForecastCollectionViewCell.self, for: indexPath) { cell in
-                cell.setup(self.isLoading)
+                cell.setup(self.isLoading, self.viewModel.forecast)
             }
         }
     }
