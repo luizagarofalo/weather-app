@@ -87,7 +87,6 @@
             <connections>
                 <outlet property="animationView" destination="emX-zP-8sl" id="U0u-VB-x83"/>
                 <outlet property="hourLabel" destination="Uuo-by-VPp" id="ZJy-Tu-Taf"/>
-                <outlet property="view" destination="IpD-iH-M8l" id="qUt-UZ-b39"/>
                 <outlet property="weatherLabel" destination="dK2-JQ-MPn" id="gWF-uK-NNC"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>

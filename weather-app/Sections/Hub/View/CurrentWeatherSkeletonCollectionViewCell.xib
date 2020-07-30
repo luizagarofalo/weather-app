@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CurrentWeatherSkeletonCollectionViewCell" id="gTV-IL-0wX" customClass="CurrentWeatherSkeletonCollectionViewCell" customModule="weather_app" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-Bf-fej">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <subviews>
                             <view clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-0S-ZYp" userLabel="City Name Skeleton View">
                                 <rect key="frame" x="115" y="80" width="145" height="32"/>
@@ -81,6 +81,18 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8go-hP-iJt">
+                                <rect key="frame" x="-8" y="690" width="391" height="25"/>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="T8k-Y8-wJT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -88,11 +100,14 @@
                             <constraint firstItem="EQI-li-5au" firstAttribute="centerX" secondItem="qgx-Bf-fej" secondAttribute="centerX" id="6Yv-ib-EHY"/>
                             <constraint firstItem="9yR-ck-tSH" firstAttribute="centerX" secondItem="qgx-Bf-fej" secondAttribute="centerX" id="D6C-Zh-lGg"/>
                             <constraint firstItem="EQI-li-5au" firstAttribute="top" secondItem="9yR-ck-tSH" secondAttribute="bottom" constant="22" id="EZ7-h4-1Fp"/>
+                            <constraint firstAttribute="bottom" secondItem="8go-hP-iJt" secondAttribute="bottom" constant="-15" id="FcJ-My-WNX"/>
                             <constraint firstItem="JeV-RK-FYI" firstAttribute="centerX" secondItem="qgx-Bf-fej" secondAttribute="centerX" id="KEG-xk-ECU"/>
                             <constraint firstItem="DCs-DH-BV5" firstAttribute="centerX" secondItem="qgx-Bf-fej" secondAttribute="centerX" id="KQr-f5-nrf"/>
                             <constraint firstItem="DCs-DH-BV5" firstAttribute="top" secondItem="JeV-RK-FYI" secondAttribute="bottom" constant="25" id="L6x-Qz-Mdo"/>
+                            <constraint firstItem="8go-hP-iJt" firstAttribute="leading" secondItem="qgx-Bf-fej" secondAttribute="leading" constant="-8" id="hpa-HM-IVD"/>
                             <constraint firstItem="ZwE-0S-ZYp" firstAttribute="centerX" secondItem="qgx-Bf-fej" secondAttribute="centerX" id="id2-VM-uec"/>
                             <constraint firstItem="JeV-RK-FYI" firstAttribute="top" secondItem="ZwE-0S-ZYp" secondAttribute="bottom" constant="8" id="n0e-xi-cFg"/>
+                            <constraint firstAttribute="trailing" secondItem="8go-hP-iJt" secondAttribute="trailing" constant="-8" id="xNJ-lg-BzZ"/>
                             <constraint firstItem="9yR-ck-tSH" firstAttribute="top" secondItem="DCs-DH-BV5" secondAttribute="bottom" constant="34" id="yUS-4o-kt2"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

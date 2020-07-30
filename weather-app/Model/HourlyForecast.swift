@@ -9,10 +9,10 @@
 import Foundation
 
 struct HourlyForecast: Codable {
-    let lat, lon: Double?
-    let timezone: String?
-    let timezoneOffset: Int?
-    let hourly: [Hourly]?
+    let lat, lon: Double
+    let timezone: String
+    let timezoneOffset: Int
+    let hourly: [Hourly]
     
     enum CodingKeys: String, CodingKey {
         case lat, lon, timezone

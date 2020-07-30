@@ -44,13 +44,13 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
 
 extension HourlyForecastCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return forecast?.hourly?.count ?? 4
+        return forecast?.hourly.count ?? 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(of: SingleHourlyForecastCollectionViewCell.self, for: indexPath) { cell in
             let timezone = self.forecast?.timezone ?? ""
-            cell.setup(self.isLoading, self.forecast?.hourly?[indexPath.row] ?? nil, timezone)
+            cell.setup(self.isLoading, self.forecast?.hourly[indexPath.row] ?? nil, timezone)
         }
     }
     

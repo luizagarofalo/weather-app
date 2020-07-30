@@ -7,16 +7,14 @@
 //
 
 import Lottie
-import SkeletonView
 import UIKit
 
 class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
-    @IBOutlet weak var view: UIView!
     
     // MARK: - Properties
     private var weatherConditionAnimation = AnimationView()
@@ -42,17 +40,8 @@ class SingleHourlyForecastCollectionViewCell: UICollectionViewCell {
         return dateFormatter.string(from: date)
     }
     
-    private func showSkeleton(_ show: Bool) {
-        DispatchQueue.main.async {
-            show ? self.view.showAnimatedSkeleton() : self.view.hideSkeleton()
-            self.weatherConditionAnimation.isHidden = show
-        }
-    }
-    
     // MARK: - Public Methods
-    func setup(_ isLoading: Bool, _ forecast: HourlyForecast.Hourly?, _ timezone: String) {
-        self.showSkeleton(isLoading)
-        
+    func setup(_ isLoading: Bool, _ forecast: HourlyForecast.Hourly?, _ timezone: String) {        
         guard let forecast = forecast else { return }
         self.hourLabel.text = getTime(forecast.dt, timezone)
         self.weatherLabel.text = String(format: "%.0f", forecast.temp) + "º"

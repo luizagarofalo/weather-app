@@ -112,15 +112,14 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if isLoading {
+            return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
+        }
         
         if indexPath.section == 0 {
-            if isLoading {
-                return collectionView.dequeueReusableCell(of: CurrentWeatherSkeletonCollectionViewCell.self, for: indexPath)
-            } else {
-                return collectionView.dequeueReusableCell(of: CurrentWeatherCollectionViewCell.self, for: indexPath) { cell in
-                    guard let weather = self.viewModel.weather else { return }
-                    cell.setup(weather)
-                }
+            return collectionView.dequeueReusableCell(of: CurrentWeatherCollectionViewCell.self, for: indexPath) { cell in
+                guard let weather = self.viewModel.weather else { return }
+                cell.setup(weather)
             }
         } else {
             return collectionView.dequeueReusableCell(of: HourlyForecastCollectionViewCell.self, for: indexPath) { cell in
@@ -133,8 +132,10 @@ extension HubViewController: UICollectionViewDataSource, UICollectionViewDelegat
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let width = UIScreen.main.bounds.size.width
         let screenHeight = UIScreen.main.bounds.height
-        let height: CGFloat = indexPath.section == 0 ? (screenHeight * 0.65) : (screenHeight * 0.25)
-        return CGSize(width: UIScreen.main.bounds.size.width, height: height)
+        var height = indexPath.section == 0 ? (screenHeight * 0.65) : (screenHeight * 0.25)
+        height = isLoading ? collectionView.frame.height : height
+        return CGSize(width: width, height: height)
     }
 }
