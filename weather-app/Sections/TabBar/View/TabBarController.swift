@@ -31,9 +31,9 @@ class TabBarController: UITabBarController {
         layer.path = UIBezierPath(roundedRect: CGRect(x: 20, y: self.tabBar.bounds.minY + 16, width: self.tabBar.bounds.width - 40,
                                                       height: self.tabBar.bounds.height - 40), cornerRadius: 36).cgPath
         
-        self.tabBar.barTintColor = UIColor(red: 24/255, green: 32/255, blue: 242/255, alpha: 1)
-        self.tabBar.tintColor = UIColor(red: 24/255, green: 32/255, blue: 242/255, alpha: 1)
-        self.tabBar.unselectedItemTintColor = UIColor(red: 24/255, green: 32/255, blue: 242/255, alpha: 0.50)
+        self.tabBar.barTintColor = .lightBlue
+        self.tabBar.tintColor = .lightBlue
+        self.tabBar.unselectedItemTintColor = .opaqueBlue
 
         self.tabBar.itemWidth = 50
         self.tabBar.itemPositioning = .centered

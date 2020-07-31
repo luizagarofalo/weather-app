@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="weather_app" customModuleProvider="target">
+            <connections>
+                <outlet property="celsiusButton" destination="9Zt-Tj-c6a" id="9O9-4I-R1N"/>
+                <outlet property="fahrenheitButton" destination="AXE-zt-Py8" id="h9A-Ds-sqh"/>
+                <outlet property="kelvinButton" destination="NIg-oD-5eg" id="krh-E3-Xsq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whiteView" destination="Pt3-VH-6Jl" id="fhc-kE-Xnc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgP-hw-2SA">
+                    <rect key="frame" x="110" y="141" width="100" height="286"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-VH-6Jl">
+                            <rect key="frame" x="5" y="4" width="90" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zt-Tj-c6a">
+                            <rect key="frame" x="27.5" y="17" width="45" height="64"/>
+                            <accessibility key="accessibilityConfiguration" label="celsius"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                            <state key="normal" title="ºC">
+                                <color key="titleColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="changeUnit:" destination="-1" eventType="touchUpInside" id="its-aP-NtQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXE-zt-Py8">
+                            <rect key="frame" x="31.5" y="111" width="37" height="64"/>
+                            <accessibility key="accessibilityConfiguration" label="fahrenheit"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                            <state key="normal" title="ºF">
+                                <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="changeUnit:" destination="-1" eventType="touchUpInside" id="eY8-NL-KvW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIg-oD-5eg">
+                            <rect key="frame" x="28.5" y="206" width="43" height="64"/>
+                            <accessibility key="accessibilityConfiguration" label="kelvin"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                            <state key="normal" title="ºK">
+                                <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="changeUnit:" destination="-1" eventType="touchUpInside" id="e9v-Hb-49v"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.12549019610000001" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NIg-oD-5eg" secondAttribute="bottom" constant="16" id="7xV-BV-Q9F"/>
+                        <constraint firstItem="AXE-zt-Py8" firstAttribute="centerX" secondItem="GgP-hw-2SA" secondAttribute="centerX" id="Dcb-1x-JVB"/>
+                        <constraint firstAttribute="height" constant="286" id="Flb-wH-c8e"/>
+                        <constraint firstItem="9Zt-Tj-c6a" firstAttribute="top" secondItem="GgP-hw-2SA" secondAttribute="top" constant="17" id="V6h-Ie-eOo"/>
+                        <constraint firstItem="NIg-oD-5eg" firstAttribute="centerX" secondItem="GgP-hw-2SA" secondAttribute="centerX" id="X4t-4X-p8G"/>
+                        <constraint firstAttribute="width" constant="100" id="Zsh-no-g99"/>
+                        <constraint firstItem="9Zt-Tj-c6a" firstAttribute="centerX" secondItem="GgP-hw-2SA" secondAttribute="centerX" id="j7Z-n4-zS8"/>
+                        <constraint firstItem="AXE-zt-Py8" firstAttribute="centerY" secondItem="GgP-hw-2SA" secondAttribute="centerY" id="lkS-iF-FeG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="GgP-hw-2SA" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="GMz-2w-5vN"/>
+                <constraint firstItem="GgP-hw-2SA" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="j2h-Fg-wdf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

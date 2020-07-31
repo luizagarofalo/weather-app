@@ -6,7 +6,6 @@
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol SearchCoordinatorDelegate: AnyObject {
@@ -17,8 +16,8 @@ protocol SearchCoordinatorDelegate: AnyObject {
 class SearchCoordinator {
     
     // MARK: - Properties
-    var viewModel: SearchViewModel?
-    var viewController: SearchViewController?
+    private var viewModel: SearchViewModel?
+    private var viewController: SearchViewController?
     
     private let navigation: UINavigationController = {
         let navigationController = UINavigationController()

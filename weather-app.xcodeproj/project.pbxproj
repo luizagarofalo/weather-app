@@ -56,6 +56,11 @@
 		DB7DA2BB24CE4E6F006B0344 /* windy-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2BA24CE4E6E006B0344 /* windy-b.json */; };
 		DBB2D4C424D0F07600E0943D /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */; };
 		DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C524D0FF5E00E0943D /* Weather.swift */; };
+		DBB2D4CD24D3BF0E00E0943D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4CB24D3BF0E00E0943D /* SettingsViewController.swift */; };
+		DBB2D4CE24D3BF0E00E0943D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB2D4CC24D3BF0E00E0943D /* SettingsViewController.xib */; };
+		DBB2D4D024D3BFFD00E0943D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4CF24D3BFFD00E0943D /* SettingsViewModel.swift */; };
+		DBB2D4D224D3C03200E0943D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4D124D3C03200E0943D /* SettingsCoordinator.swift */; };
+		DBB2D4D424D3D6CA00E0943D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -154,6 +159,11 @@
 		DB7DA2BA24CE4E6E006B0344 /* windy-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "windy-b.json"; sourceTree = "<group>"; };
 		DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
 		DBB2D4C524D0FF5E00E0943D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		DBB2D4CB24D3BF0E00E0943D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DBB2D4CC24D3BF0E00E0943D /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		DBB2D4CF24D3BFFD00E0943D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DBB2D4D124D3C03200E0943D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -196,6 +206,7 @@
 			children = (
 				DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */,
 				DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */,
+				DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */,
 				DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */,
 				DB7DA28A24CA5AA7006B0344 /* UITabBar+Extension.swift */,
 				DB52778624CA068C002DCF4D /* UIView+Extension.swift */,
@@ -241,8 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				DB5277A324CA378E002DCF4D /* Coordinator */,
-				DB5277A024CA3731002DCF4D /* ViewModel */,
 				DB52779B24CA34DE002DCF4D /* View */,
+				DB5277A024CA3731002DCF4D /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				DB7DA29D24CCC8DA006B0344 /* Error */,
 				DB53F7E224C61F58001A3DD5 /* Hub */,
 				DB52779A24CA34C4002DCF4D /* Search */,
+				DBB2D4C724D3BEBA00E0943D /* Settings */,
 				DB52778C24CA0CE3002DCF4D /* TabBar */,
 			);
 			path = Sections;
@@ -435,6 +447,41 @@
 				DB7DA2A024CD331F006B0344 /* ErrorViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DBB2D4C724D3BEBA00E0943D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2D4C824D3BED200E0943D /* Coordinator */,
+				DBB2D4CA24D3BEDE00E0943D /* View */,
+				DBB2D4C924D3BED900E0943D /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DBB2D4C824D3BED200E0943D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2D4D124D3C03200E0943D /* SettingsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DBB2D4C924D3BED900E0943D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2D4CF24D3BFFD00E0943D /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DBB2D4CA24D3BEDE00E0943D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2D4CB24D3BF0E00E0943D /* SettingsViewController.swift */,
+				DBB2D4CC24D3BF0E00E0943D /* SettingsViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DBCEE26224C93AD600FD6A0F /* Frameworks */ = {
@@ -580,6 +627,7 @@
 				DB7DA2B324CE4CC9006B0344 /* rain-b.json in Resources */,
 				DBCEE27B24C954F700FD6A0F /* clear-night.json in Resources */,
 				DB7DA2AB24CE494F006B0344 /* cloudy-b.json in Resources */,
+				DBB2D4CE24D3BF0E00E0943D /* SettingsViewController.xib in Resources */,
 				DB52779F24CA36D3002DCF4D /* SearchViewController.xib in Resources */,
 				DB7DA2BB24CE4E6F006B0344 /* windy-b.json in Resources */,
 				DB7DA2B924CE4DE7006B0344 /* clear-day-b.json in Resources */,
@@ -609,11 +657,14 @@
 				DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */,
 				DBCEE27324C9494E00FD6A0F /* Condition.swift in Sources */,
 				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
+				DBB2D4CD24D3BF0E00E0943D /* SettingsViewController.swift in Sources */,
+				DBB2D4D024D3BFFD00E0943D /* SettingsViewModel.swift in Sources */,
 				DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */,
 				DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */,
 				DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
 				DB5277A524CA379E002DCF4D /* SearchCoordinator.swift in Sources */,
+				DBB2D4D424D3D6CA00E0943D /* UIColor+Extension.swift in Sources */,
 				DB53F7BB24C61DD8001A3DD5 /* AppDelegate.swift in Sources */,
 				DB7DA29B24CCC0E4006B0344 /* ErrorViewController.swift in Sources */,
 				DB7DA28F24CAAFAE006B0344 /* Location.swift in Sources */,
@@ -629,6 +680,7 @@
 				DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */,
 				DB53F7FA24C78797001A3DD5 /* HubViewModel.swift in Sources */,
 				DB7DA28B24CA5AA7006B0344 /* UITabBar+Extension.swift in Sources */,
+				DBB2D4D224D3C03200E0943D /* SettingsCoordinator.swift in Sources */,
 				DB52779924CA2EB0002DCF4D /* TabBarCoordinator.swift in Sources */,
 				DB7DA29424CBED5B006B0344 /* CustomError.swift in Sources */,
 				DB7DA2A424CD4057006B0344 /* HourlyForecastCollectionViewCell.swift in Sources */,

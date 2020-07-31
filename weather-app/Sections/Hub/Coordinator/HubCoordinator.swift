@@ -6,14 +6,13 @@
 //  Copyright © 2020 Luiza Collado Garofalo. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class HubCoordinator {
     
     // MARK: - Properties
-    var viewModel: HubViewModel?
-    var viewController: HubViewController?
+    private var viewModel: HubViewModel?
+    private var viewController: HubViewController?
     
     private let navigation: UINavigationController = {
         let navigationController = UINavigationController()
