@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
         return !cityName.isEmpty
     }
     
-    var viewModel: SearchViewModel!
+    private var viewModel: SearchViewModel!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {

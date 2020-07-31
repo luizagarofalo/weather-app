@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SettingsCoordinatorDelegate: AnyObject {
+    func didSelectUnit()
+}
+
 class SettingsCoordinator {
     
     // MARK: - Properties
@@ -19,6 +23,8 @@ class SettingsCoordinator {
         return navigationController
     }()
     
+    weak var delegate: SettingsCoordinatorDelegate?
+    
     // MARK: - Public Methods
     func start() -> SettingsViewController {
         let viewModel = SettingsViewModel()
@@ -26,8 +32,15 @@ class SettingsCoordinator {
         
         self.viewModel = viewModel
         self.viewController = viewController
+        self.viewModel?.coordinatorDelegate = self
         
         navigation.pushViewController(viewController, animated: true)
         return viewController
+    }
+}
+
+extension SettingsCoordinator: SettingsViewModelCoordinatorDelegate {
+    func didSelectUnit() {
+        delegate?.didSelectUnit()
     }
 }

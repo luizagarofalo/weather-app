@@ -37,10 +37,12 @@ enum Router {
     
     var parameters: [URLQueryItem] {
         let accessToken = "59191370e76ba00938f77ea19fff34d5"
+        let storedUnit = UserDefaults.standard.string(forKey: "unit")
+        let unit = Unit(rawValue: storedUnit ?? "celsius")
         
         switch self {
         case .current(let lat, let lon, let city), .forecast(let lat, let lon, let city):
-            return [URLQueryItem(name: "units", value: "metric"),
+            return [URLQueryItem(name: "units", value: unit?.description ?? "metric"),
                     URLQueryItem(name: "q", value: city),
                     URLQueryItem(name: "lat", value: lat),
                     URLQueryItem(name: "lon", value: lon),

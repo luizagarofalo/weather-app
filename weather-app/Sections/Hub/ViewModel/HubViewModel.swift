@@ -22,12 +22,11 @@ class HubViewModel {
     }
     
     // MARK: - Properties
+    private var location: Location?
     private var service = Service()
-    
-    var cityName: String?
-    var latitude: String?
-    var longitude: String?
-    var location: Location?
+    private var cityName: String?
+    private var latitude: String?
+    private var longitude: String?
     var forecast: HourlyForecast?
     var weather: CurrentWeather?
     

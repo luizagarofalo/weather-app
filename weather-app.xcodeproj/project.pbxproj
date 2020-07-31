@@ -61,6 +61,7 @@
 		DBB2D4D024D3BFFD00E0943D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4CF24D3BFFD00E0943D /* SettingsViewModel.swift */; };
 		DBB2D4D224D3C03200E0943D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4D124D3C03200E0943D /* SettingsCoordinator.swift */; };
 		DBB2D4D424D3D6CA00E0943D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */; };
+		DBB2D4D624D485DA00E0943D /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4D524D485DA00E0943D /* Unit.swift */; };
 		DBCEE26424C93AD700FD6A0F /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; };
 		DBCEE26524C93AD700FD6A0F /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBCEE26324C93AD700FD6A0F /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBCEE26924C93B9400FD6A0F /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = DBCEE26824C93B9400FD6A0F /* tornado.json */; };
@@ -164,6 +165,7 @@
 		DBB2D4CF24D3BFFD00E0943D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DBB2D4D124D3C03200E0943D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DBB2D4D524D485DA00E0943D /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		DBCEE26324C93AD700FD6A0F /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		DBCEE26824C93B9400FD6A0F /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
 		DBCEE26A24C93C1800FD6A0F /* windy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windy.json; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				DB53F7F524C65DA3001A3DD5 /* CurrentWeather.swift */,
 				DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */,
 				DB7DA28E24CAAFAE006B0344 /* Location.swift */,
+				DBB2D4D524D485DA00E0943D /* Unit.swift */,
 				DBB2D4C524D0FF5E00E0943D /* Weather.swift */,
 			);
 			path = Model;
@@ -671,6 +674,7 @@
 				DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */,
 				DB53F7F624C65DA3001A3DD5 /* CurrentWeather.swift in Sources */,
 				DBCEE28524C9E84000FD6A0F /* CurrentWeatherSkeletonCollectionViewCell.swift in Sources */,
+				DBB2D4D624D485DA00E0943D /* Unit.swift in Sources */,
 				DB53F7F124C645BC001A3DD5 /* Router.swift in Sources */,
 				DB53F7EA24C61F81001A3DD5 /* HubCoordinator.swift in Sources */,
 				DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */,

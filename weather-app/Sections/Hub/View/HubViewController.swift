@@ -17,7 +17,7 @@ class HubViewController: UIViewController {
     // MARK: - Properties
     private var errorView: ErrorViewController?
     private var isLoading = true
-    var viewModel: HubViewModel!
+    private var viewModel: HubViewModel!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {

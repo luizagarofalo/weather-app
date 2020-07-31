@@ -20,7 +20,7 @@ class ErrorViewController: UIViewController {
     // MARK: - Properties
     private var errorAnimation = AnimationView()
     private var error: CustomError!
-    var viewModel: ErrorViewModel!
+    private var viewModel: ErrorViewModel!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {

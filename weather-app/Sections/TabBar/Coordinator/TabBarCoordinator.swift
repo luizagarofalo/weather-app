@@ -31,6 +31,7 @@ class TabBarCoordinator: Coordinator {
         tabBar?.viewControllers = [hubCoordinator.start(), searchCoordinator.start(), settingsCoordinator.start()]
         window.rootViewController = tabBar
         searchCoordinator.delegate = self
+        settingsCoordinator.delegate = self
     }
 }
 
@@ -43,5 +44,11 @@ extension TabBarCoordinator: SearchCoordinatorDelegate {
     func didSelectCurrentLocation(latitude: String, longitude: String) {
         tabBar?.selectedIndex = 0
         hubCoordinator.updateLocation(lat: latitude, lon: longitude, location: .coordinates)
+    }
+}
+
+extension TabBarCoordinator: SettingsCoordinatorDelegate {
+    func didSelectUnit() {
+        hubCoordinator.reload()
     }
 }

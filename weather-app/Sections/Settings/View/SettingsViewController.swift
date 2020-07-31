@@ -9,20 +9,6 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    enum Unit: String {
-        case celsius
-        case fahrenheit
-        case kelvin
-        
-        var coordinate: CGFloat {
-            switch self {
-            case .celsius: return 4
-            case .fahrenheit: return 98
-            case .kelvin: return 192
-            }
-        }
-    }
     
     // MARK: - Outlets
     @IBOutlet weak var fahrenheitButton: UIButton!
@@ -31,7 +17,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var whiteView: UIView!
     
     // MARK: - Properties
-    var viewModel: SettingsViewModel!
+    private var viewModel: SettingsViewModel!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {
@@ -42,6 +28,12 @@ class SettingsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.tabBarItem.image = #imageLiteral(resourceName: "settings")
         self.viewModel = viewModel
+    }
+    
+    // MARK: - Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setup()
     }
     
     // MARK: - Private Methods
@@ -67,22 +59,19 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    private func setup() {
+        let unit = viewModel.getStoredUnit()
+        animate(unit)
+        color(unit)
+    }
+    
     // MARK: - Actions
     @IBAction func changeUnit(_ sender: UIButton) {
         guard let label = sender.accessibilityLabel else { return }
-        if label == Unit.celsius.rawValue {
-            animate(.celsius)
-            color(.celsius)
-        }
+        guard let unit = Unit(rawValue: label) else { return }
         
-        if label == Unit.fahrenheit.rawValue {
-            animate(.fahrenheit)
-            color(.fahrenheit)
-        }
-        
-        if label == Unit.kelvin.rawValue {
-            animate(.kelvin)
-            color(.kelvin)
-        }
+        animate(unit)
+        color(unit)
+        viewModel.selectUnit(unit)
     }
 }

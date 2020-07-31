@@ -34,4 +34,8 @@ class HubCoordinator {
     func updateLocation(city: String? = nil, lat: String? = nil, lon: String? = nil, location: Location? = nil) {
         viewModel?.updateLocation(city: city, lat: lat, lon: lon, location: location)
     }
+    
+    func reload() {
+        viewModel?.fetchCurrentWeather()
+    }
 }
