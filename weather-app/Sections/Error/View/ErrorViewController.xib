@@ -63,6 +63,18 @@ Please check your network settings.</string>
                         <constraint firstAttribute="height" constant="160" id="KIV-OA-P1u"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4Y-Yl-uuK">
+                    <rect key="frame" x="-8" y="558" width="336" height="25"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.12549019610000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="C3U-cV-TMm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -70,8 +82,11 @@ Please check your network settings.</string>
                 <constraint firstItem="BFR-WY-tcD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RNw-5c-SXC"/>
                 <constraint firstItem="8MM-Hd-JsW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="T6H-FS-pBH"/>
                 <constraint firstItem="7ZY-tw-VnY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Unn-rx-sZl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="X4Y-Yl-uuK" secondAttribute="bottom" constant="-15" id="ZlC-tA-2ur"/>
                 <constraint firstItem="8MM-Hd-JsW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aDw-mr-8BZ"/>
+                <constraint firstItem="X4Y-Yl-uuK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-8" id="cWP-jj-Hdv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8MM-Hd-JsW" secondAttribute="trailing" constant="16" id="dRg-Cv-0GB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X4Y-Yl-uuK" secondAttribute="trailing" constant="-8" id="da3-Wj-qRC"/>
                 <constraint firstItem="7ZY-tw-VnY" firstAttribute="top" secondItem="BFR-WY-tcD" secondAttribute="bottom" constant="24" id="dzb-DR-uC7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2dN-sg-Yfa" secondAttribute="trailing" constant="16" id="gl4-mx-w8W"/>
                 <constraint firstItem="BFR-WY-tcD" firstAttribute="top" secondItem="2dN-sg-Yfa" secondAttribute="bottom" constant="24" id="izI-o3-w4X"/>

@@ -11,7 +11,6 @@
 		DB52778724CA068C002DCF4D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778624CA068C002DCF4D /* UIView+Extension.swift */; };
 		DB52778F24CA0D23002DCF4D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52778D24CA0D23002DCF4D /* TabBarController.swift */; };
 		DB52779024CA0D23002DCF4D /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52778E24CA0D23002DCF4D /* TabBarController.xib */; };
-		DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */; };
 		DB52779924CA2EB0002DCF4D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779824CA2EB0002DCF4D /* TabBarCoordinator.swift */; };
 		DB52779E24CA36D3002DCF4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52779C24CA36D3002DCF4D /* SearchViewController.swift */; };
 		DB52779F24CA36D3002DCF4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52779D24CA36D3002DCF4D /* SearchViewController.xib */; };
@@ -21,7 +20,6 @@
 		DB53F7BD24C61DD8001A3DD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7BC24C61DD8001A3DD5 /* SceneDelegate.swift */; };
 		DB53F7C424C61DD9001A3DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB53F7C324C61DD9001A3DD5 /* Assets.xcassets */; };
 		DB53F7C724C61DD9001A3DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB53F7C524C61DD9001A3DD5 /* LaunchScreen.storyboard */; };
-		DB53F7D224C61DD9001A3DD5 /* weather_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7D124C61DD9001A3DD5 /* weather_appTests.swift */; };
 		DB53F7DE24C61E58001A3DD5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7DD24C61E58001A3DD5 /* AppCoordinator.swift */; };
 		DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7DF24C61E6B001A3DD5 /* Coordinator.swift */; };
 		DB53F7E724C61F76001A3DD5 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7E524C61F76001A3DD5 /* HubViewController.swift */; };
@@ -54,6 +52,11 @@
 		DB7DA2B724CE4D6E006B0344 /* clear-night-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2B624CE4D6E006B0344 /* clear-night-b.json */; };
 		DB7DA2B924CE4DE7006B0344 /* clear-day-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2B824CE4DE7006B0344 /* clear-day-b.json */; };
 		DB7DA2BB24CE4E6F006B0344 /* windy-b.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7DA2BA24CE4E6E006B0344 /* windy-b.json */; };
+		DBA4E52A24DC896900D73D4A /* ErrorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4E52924DC896900D73D4A /* ErrorViewModelTests.swift */; };
+		DBA4E52D24DCAFB400D73D4A /* HubViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4E52C24DCAFB400D73D4A /* HubViewModelTests.swift */; };
+		DBA4E53024DDE58300D73D4A /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4E52F24DDE58300D73D4A /* SearchViewModelTests.swift */; };
+		DBA4E53224DDEB2500D73D4A /* CLLocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4E53124DDEB2500D73D4A /* CLLocationManagerMock.swift */; };
+		DBA4E53524DDF68B00D73D4A /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4E53424DDF68B00D73D4A /* SettingsViewModelTests.swift */; };
 		DBB2D4C424D0F07600E0943D /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */; };
 		DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4C524D0FF5E00E0943D /* Weather.swift */; };
 		DBB2D4CD24D3BF0E00E0943D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2D4CB24D3BF0E00E0943D /* SettingsViewController.swift */; };
@@ -111,7 +114,6 @@
 		DB52778624CA068C002DCF4D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DB52778D24CA0D23002DCF4D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB52778E24CA0D23002DCF4D /* TabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
-		DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		DB52779824CA2EB0002DCF4D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		DB52779C24CA36D3002DCF4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB52779D24CA36D3002DCF4D /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -124,7 +126,6 @@
 		DB53F7C624C61DD9001A3DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB53F7C824C61DD9001A3DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB53F7CD24C61DD9001A3DD5 /* weather-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "weather-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB53F7D124C61DD9001A3DD5 /* weather_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather_appTests.swift; sourceTree = "<group>"; };
 		DB53F7D324C61DD9001A3DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB53F7DD24C61E58001A3DD5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DB53F7DF24C61E6B001A3DD5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -158,6 +159,11 @@
 		DB7DA2B624CE4D6E006B0344 /* clear-night-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-night-b.json"; sourceTree = "<group>"; };
 		DB7DA2B824CE4DE7006B0344 /* clear-day-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-day-b.json"; sourceTree = "<group>"; };
 		DB7DA2BA24CE4E6E006B0344 /* windy-b.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "windy-b.json"; sourceTree = "<group>"; };
+		DBA4E52924DC896900D73D4A /* ErrorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModelTests.swift; sourceTree = "<group>"; };
+		DBA4E52C24DCAFB400D73D4A /* HubViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewModelTests.swift; sourceTree = "<group>"; };
+		DBA4E52F24DDE58300D73D4A /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		DBA4E53124DDEB2500D73D4A /* CLLocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerMock.swift; sourceTree = "<group>"; };
+		DBA4E53424DDF68B00D73D4A /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
 		DBB2D4C324D0F07600E0943D /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
 		DBB2D4C524D0FF5E00E0943D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		DBB2D4CB24D3BF0E00E0943D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +212,6 @@
 		DB52778324CA057D002DCF4D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DB52779124CA1164002DCF4D /* UIApplication+Extension.swift */,
 				DB52778424CA0657002DCF4D /* UICollectionView+Extension.swift */,
 				DBB2D4D324D3D6CA00E0943D /* UIColor+Extension.swift */,
 				DB7DA28C24CA60DD006B0344 /* UIDevice+Extension.swift */,
@@ -322,7 +327,10 @@
 		DB53F7D024C61DD9001A3DD5 /* weather-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB53F7D124C61DD9001A3DD5 /* weather_appTests.swift */,
+				DBA4E52824DC892C00D73D4A /* Error */,
+				DBA4E52B24DCAFA500D73D4A /* Hub */,
+				DBA4E52E24DDE57000D73D4A /* Search */,
+				DBA4E53324DDF67A00D73D4A /* Settings */,
 				DB53F7D324C61DD9001A3DD5 /* Info.plist */,
 			);
 			path = "weather-appTests";
@@ -450,6 +458,39 @@
 				DB7DA2A024CD331F006B0344 /* ErrorViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DBA4E52824DC892C00D73D4A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4E52924DC896900D73D4A /* ErrorViewModelTests.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DBA4E52B24DCAFA500D73D4A /* Hub */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4E52C24DCAFB400D73D4A /* HubViewModelTests.swift */,
+			);
+			path = Hub;
+			sourceTree = "<group>";
+		};
+		DBA4E52E24DDE57000D73D4A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4E53124DDEB2500D73D4A /* CLLocationManagerMock.swift */,
+				DBA4E52F24DDE58300D73D4A /* SearchViewModelTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DBA4E53324DDF67A00D73D4A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4E53424DDF68B00D73D4A /* SettingsViewModelTests.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DBB2D4C724D3BEBA00E0943D /* Settings */ = {
@@ -662,7 +703,6 @@
 				DB53F7F324C65B17001A3DD5 /* Service.swift in Sources */,
 				DBB2D4CD24D3BF0E00E0943D /* SettingsViewController.swift in Sources */,
 				DBB2D4D024D3BFFD00E0943D /* SettingsViewModel.swift in Sources */,
-				DB52779224CA1164002DCF4D /* UIApplication+Extension.swift in Sources */,
 				DB7DA28D24CA60DD006B0344 /* UIDevice+Extension.swift in Sources */,
 				DBB2D4C624D0FF5E00E0943D /* Weather.swift in Sources */,
 				DB53F7E024C61E6B001A3DD5 /* Coordinator.swift in Sources */,
@@ -696,7 +736,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB53F7D224C61DD9001A3DD5 /* weather_appTests.swift in Sources */,
+				DBA4E52D24DCAFB400D73D4A /* HubViewModelTests.swift in Sources */,
+				DBA4E53224DDEB2500D73D4A /* CLLocationManagerMock.swift in Sources */,
+				DBA4E53524DDF68B00D73D4A /* SettingsViewModelTests.swift in Sources */,
+				DBA4E53024DDE58300D73D4A /* SearchViewModelTests.swift in Sources */,
+				DBA4E52A24DC896900D73D4A /* ErrorViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

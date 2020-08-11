@@ -21,7 +21,7 @@ class SearchViewModel: NSObject {
     private var latitude: String?
     private var longitude: String?
     private var locationCoordinate: CLLocationCoordinate2D?
-    private var locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     
     weak var coordinatorDelegate: SearchViewModelCoordinatorDelegate?
     
